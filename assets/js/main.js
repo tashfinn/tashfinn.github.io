@@ -16,7 +16,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const typedTextSpan = document.querySelector(".typed-text");
     const textArray = [
         "Software Engineer", 
-        "Full-Stack Developer", 
+        "Full-Stack Developer",
+        "Mobile App Developer",
         "Tech Enthusiast", 
         "Problem Solver"
     ];

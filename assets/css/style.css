@@ -775,3 +775,132 @@ body.light-mode .about-text strong {
     .hero-cta { flex-direction: column; align-items: center; }
     .about-stats { grid-template-columns: 1fr; }
 }
+
+/* Contact Grid Setup */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 4rem;
+    margin-top: 3rem;
+    margin-bottom: 4rem;
+}
+
+@media (max-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+
+.contact-left h3 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.contact-left p {
+    color: var(--text-muted);
+    margin-bottom: 3rem;
+    max-width: 400px;
+}
+
+.contact-info-item {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.icon-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgba(139, 92, 246, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--secondary);
+    font-size: 1.2rem;
+    border: 1px solid rgba(139, 92, 246, 0.2);
+}
+
+.info-label {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0.25rem;
+}
+
+.info-value {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+/* Form Styles */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-row {
+    display: flex;
+    gap: 1.5rem;
+}
+
+@media (max-width: 500px) {
+    .form-row {
+        flex-direction: column;
+    }
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 1.2rem;
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--glass-border);
+    border-radius: 12px;
+    color: var(--text-main);
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+body.light-mode .contact-form input,
+body.light-mode .contact-form textarea {
+    background: rgba(255, 255, 255, 0.5);
+    color: #000;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: var(--secondary);
+    box-shadow: 0 0 10px rgba(139, 92, 246, 0.2);
+}
+
+.btn-submit {
+    background: white;
+    color: var(--bg-dark);
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 1.1rem;
+    padding: 1.2rem;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: var(--transition);
+    margin-top: 0.5rem;
+}
+
+.btn-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(255, 255, 255, 0.2);
+}
+
+body.light-mode .btn-submit {
+    background: var(--bg-dark);
+    color: white;
+}

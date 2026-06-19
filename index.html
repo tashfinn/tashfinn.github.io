@@ -22,7 +22,8 @@
                     <li><a href="#experience">Experience</a></li>
                     <li><a href="#skills">Skills</a></li>
                     <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact" class="btn-primary">Contact</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="assets/Miftahul_Islam_Tashfin_Resume.pdf" target="_blank" class="btn-primary" style="padding: 0.5rem 1rem; font-size: 0.9rem;"><i class="ph-fill ph-file-pdf"></i> View CV</a></li>
                 </ul>
                 <button id="theme-toggle" class="theme-btn" aria-label="Toggle theme">
                     <i class="ph ph-sun"></i>
@@ -44,8 +45,8 @@
                     “I thrive on learning, building, and collaborating on projects that bridge innovation and real-world impact.”
                 </p>
                 <div class="hero-cta">
-                    <a href="#projects" class="btn-primary">View My Work</a>
-                    <a href="assets/Miftahul_Islam_Tashfin_Resume.pdf" target="_blank" class="btn-secondary"><i class="ph ph-download-simple"></i> Download CV</a>
+                    <a href="#contact" class="btn-primary">Get In Touch</a>
+                    <a href="#projects" class="btn-secondary">View My Work</a>
                     <div class="hero-icons">
                         <a href="https://github.com/tashfinn" target="_blank" class="btn-icon" aria-label="GitHub"><i class="ph ph-github-logo"></i></a>
                         <a href="https://www.linkedin.com/in/tashfinn/" target="_blank" class="btn-icon" aria-label="LinkedIn"><i class="ph ph-linkedin-logo"></i></a>
@@ -196,16 +197,44 @@
     <!-- Footer / Contact -->
     <footer id="contact" class="footer section">
         <div class="container fade-in-up">
-            <h2 class="section-title text-center">Let's Connect</h2>
-            <p class="text-center contact-sub">Currently open for new opportunities and collaborations.</p>
-            <div class="contact-details text-center">
-                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=mwtsfn@gmail.com" target="_blank" class="contact-link"><i class="ph ph-envelope-simple"></i> mwtsfn@gmail.com</a>
-                <a href="https://wa.me/8801731955291" target="_blank" class="contact-link"><i class="ph ph-whatsapp-logo"></i> +880 1731 955291</a>
+            <h2 class="section-title text-center">Let's <span style="color: var(--secondary);">Connect</span></h2>
+            
+            <div class="contact-grid">
+                <div class="contact-left">
+                    <h3>Reach Out</h3>
+                    <p>I'm currently looking for new opportunities and collaborations. Whether you have a question, a project idea, or just want to say hi, my inbox is always open!</p>
+                    
+                    <div class="contact-info-item">
+                        <div class="icon-circle"><i class="ph-fill ph-envelope-simple"></i></div>
+                        <div>
+                            <span class="info-label">EMAIL</span>
+                            <span class="info-value">mwtsfn@gmail.com</span>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-info-item">
+                        <div class="icon-circle" style="color: #ec4899; background: rgba(236, 72, 153, 0.1); border-color: rgba(236, 72, 153, 0.2);"><i class="ph-fill ph-map-pin"></i></div>
+                        <div>
+                            <span class="info-label">LOCATION</span>
+                            <span class="info-value">Dhaka, Bangladesh</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-right glass-card">
+                    <form action="https://formspree.io/f/mqkopwpr" method="POST" class="contact-form">
+                        <div class="form-row">
+                            <input type="text" name="name" placeholder="Name" required>
+                            <input type="email" name="email" placeholder="Email" required>
+                        </div>
+                        <input type="text" name="subject" placeholder="Subject" required>
+                        <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+                        <button type="submit" class="btn-submit">Send Message</button>
+                    </form>
+                </div>
             </div>
-            <div class="social-links text-center mt-4">
-                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=mwtsfn@gmail.com" target="_blank" class="btn-primary">Say Hello <i class="ph ph-paper-plane-right"></i></a>
-            </div>
-            <div class="footer-bottom">
+
+            <div class="footer-bottom mt-5">
                 <div class="footer-icons">
                     <a href="https://github.com/tashfinn" target="_blank"><i class="ph ph-github-logo"></i></a>
                     <a href="https://www.linkedin.com/in/tashfinn/" target="_blank"><i class="ph ph-linkedin-logo"></i></a>
