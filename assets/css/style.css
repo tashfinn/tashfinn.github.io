@@ -8,9 +8,9 @@
     --secondary: #8b5cf6; /* Modern Purple */
     --text-main: #f8fafc;
     --text-muted: #94a3b8;
-    --font-sans: 'Inter', sans-serif;
-    --font-heading: 'Outfit', sans-serif;
-    --transition: all 0.3s ease;
+    --font-sans: 'Inter', system-ui, sans-serif;
+    --font-heading: 'Outfit', 'Inter', sans-serif;
+    --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 body.light-mode {
@@ -46,7 +46,8 @@ body {
 /* Typography */
 h1, h2, h3, h4, .logo {
     font-family: var(--font-heading);
-    font-weight: 600;
+    font-weight: 800;
+    letter-spacing: -0.5px;
 }
 
 a {
@@ -103,12 +104,13 @@ a {
 /* Glassmorphism Cards */
 .glass-card {
     background: var(--bg-card);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     border: 1px solid var(--glass-border);
-    border-radius: 16px;
-    padding: 2rem;
+    border-radius: 20px;
+    padding: 2.5rem;
     transition: var(--transition);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 
 .glass-card:hover {
@@ -342,21 +344,48 @@ body.light-mode .image-wrapper:hover {
     gap: 1rem;
 }
 
-.greeting {
-    color: var(--primary);
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    font-size: 0.9rem;
     font-weight: 600;
-    font-family: var(--font-heading);
-    font-size: 1.2rem;
-    display: block;
-    margin-bottom: 1rem;
-    letter-spacing: 1px;
+    color: var(--text-main);
+    margin-bottom: 2rem;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    transition: var(--transition);
+}
+
+body.light-mode .status-badge {
+    background: rgba(0, 0, 0, 0.03);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.status-badge i {
+    font-size: 1.1rem;
+    filter: drop-shadow(0 0 5px rgba(251, 191, 36, 0.5));
+}
+
+.status-badge:hover {
+    transform: translateY(-2px);
+    border-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
 
 .name {
-    font-size: 5vw;
-    line-height: 1.1;
-    margin-bottom: 1rem;
-    background: linear-gradient(to right, #fff, #94a3b8);
+    font-size: clamp(3rem, 6vw, 5.5rem);
+    line-height: 1.05;
+    font-weight: 800;
+    letter-spacing: -2px;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(to right, #fff 30%, #94a3b8);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
