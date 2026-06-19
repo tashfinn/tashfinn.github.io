@@ -116,4 +116,41 @@ document.addEventListener('DOMContentLoaded', () => {
             localStorage.setItem('portfolio-theme', 'dark');
         }
     });
+
+    // 7. Dynamic Favicon Generator
+    const favicon = document.createElement('link');
+    favicon.rel = 'icon';
+    document.head.appendChild(favicon);
+    
+    const canvas = document.createElement('canvas');
+    canvas.width = 64;
+    canvas.height = 64;
+    const ctx = canvas.getContext('2d');
+    
+    const letters = ['T', 'A', 'S', 'H', 'F', 'I', 'N'];
+    let letterIndex = 0;
+
+    function updateFavicon() {
+        ctx.clearRect(0, 0, 64, 64);
+        
+        // Draw circular background
+        ctx.beginPath();
+        ctx.arc(32, 32, 32, 0, 2 * Math.PI);
+        ctx.fillStyle = '#3b82f6'; // Match var(--primary)
+        ctx.fill();
+        
+        // Draw letter
+        ctx.fillStyle = 'white';
+        ctx.font = 'bold 36px sans-serif';
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+        ctx.fillText(letters[letterIndex], 32, 36);
+        
+        favicon.href = canvas.toDataURL('image/png');
+        letterIndex = (letterIndex + 1) % letters.length;
+    }
+    
+    // Update roughly every 571ms (4 seconds / 7 letters)
+    setInterval(updateFavicon, 571);
+    updateFavicon();
 });

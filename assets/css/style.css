@@ -242,6 +242,12 @@ body.light-mode .navbar.scrolled {
     font-size: 1.8rem;
     font-weight: 800;
     letter-spacing: -1px;
+    transition: transform 0.3s ease;
+    display: inline-block;
+}
+
+.logo:hover {
+    transform: scale(1.05);
 }
 
 .logo span {
@@ -258,6 +264,23 @@ body.light-mode .navbar.scrolled {
 .nav-links a {
     font-weight: 600;
     font-size: 0.95rem;
+    position: relative;
+    padding-bottom: 4px;
+}
+
+.nav-links a:not(.btn-primary)::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--primary);
+    transition: width 0.3s ease;
+}
+
+.nav-links a:not(.btn-primary):hover::after {
+    width: 100%;
 }
 
 .nav-links a:not(.btn-primary):hover {
@@ -379,15 +402,38 @@ body.light-mode .status-badge {
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
 
+.hero-hello {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    font-weight: 800;
+    margin-bottom: -0.5rem;
+    color: white;
+    font-family: var(--font-heading);
+}
+
+body.light-mode .hero-hello {
+    color: #0f172a;
+}
+
 .name {
-    font-size: clamp(3rem, 6vw, 5.5rem);
-    line-height: 1.05;
+    font-size: clamp(3.5rem, 7vw, 6rem);
+    line-height: 1.1;
     font-weight: 800;
     letter-spacing: -2px;
     margin-bottom: 1.5rem;
-    background: linear-gradient(to right, #fff 30%, #94a3b8);
+}
+
+.gradient-text {
+    background: linear-gradient(270deg, #ff8a00, #e52e71, #9c27b0, #3f51b5, #00bcd4, #4caf50, #ffeb3b, #ff8a00);
+    background-size: 800% 800%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    animation: gradientAnimation 10s ease infinite;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 body.light-mode .name {
