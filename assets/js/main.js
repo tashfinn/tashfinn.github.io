@@ -120,7 +120,32 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // 7. Dynamic Favicon Generator
+    // 7. Mobile Menu Toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const navLinks = document.querySelector('.nav-links');
+    
+    if (mobileMenuBtn && navLinks) {
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            const icon = mobileMenuBtn.querySelector('i');
+            if (navLinks.classList.contains('active')) {
+                icon.classList.replace('ph-list', 'ph-x');
+            } else {
+                icon.classList.replace('ph-x', 'ph-list');
+            }
+        });
+
+        // Close menu when a link is clicked
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                const icon = mobileMenuBtn.querySelector('i');
+                if (icon) icon.classList.replace('ph-x', 'ph-list');
+            });
+        });
+    }
+
+    // 8. Dynamic Favicon Generator
     const favicon = document.createElement('link');
     favicon.rel = 'icon';
     document.head.appendChild(favicon);
