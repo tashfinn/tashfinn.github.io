@@ -4,15 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Miftahul Islam Tashfin - Resume</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --text-main: #111827;
-            --text-muted: #4b5563;
-            --primary: #2563eb;
-            --border: #e5e7eb;
-        }
-
         * {
             margin: 0;
             padding: 0;
@@ -20,11 +12,12 @@
         }
 
         body {
+            /* Using a clean, formal serif font stack */
             font-family: 'Times New Roman', Times, serif;
-            color: var(--text-main);
+            color: #000000;
             background: #f3f4f6;
-            line-height: 1.35;
-            font-size: 10pt;
+            line-height: 1.4;
+            font-size: 11pt;
         }
 
         .resume-container {
@@ -32,46 +25,32 @@
             min-height: 297mm;
             margin: 2rem auto;
             background: #ffffff;
-            padding: 15mm 20mm;
+            padding: 20mm 20mm;
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
         }
 
+        /* Header */
+        header {
+            text-align: center;
+            margin-bottom: 16px;
+        }
+
         h1 {
-            font-size: 20pt;
-            font-weight: 700;
-            color: var(--text-main);
-            margin-bottom: 2px;
-        }
-
-        h2.section-title {
-            font-size: 11pt;
-            font-weight: 700;
+            font-size: 22pt;
+            font-weight: bold;
+            color: #002D62; /* Professional Dark Blue */
             text-transform: uppercase;
-            letter-spacing: 0.5px;
-            color: var(--text-main);
-            border-bottom: 1px solid var(--border);
-            padding-bottom: 2px;
-            margin-top: 10px;
-            margin-bottom: 6px;
-        }
-
-        h3 {
-            font-size: 10.5pt;
-            font-weight: 700;
-            color: var(--text-main);
+            letter-spacing: 1px;
+            margin-bottom: 4px;
         }
 
         .contact-info {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            font-size: 9.5pt;
-            color: var(--text-main);
-            margin-bottom: 10px;
+            font-size: 10.5pt;
+            color: #333333;
         }
 
         .contact-info a {
-            color: var(--text-main);
+            color: #333333;
             text-decoration: none;
         }
 
@@ -79,57 +58,78 @@
             text-decoration: underline;
         }
 
-        .summary {
-            font-size: 10pt;
-            color: var(--text-main);
+        /* Sections */
+        h2.section-title {
+            font-size: 12pt;
+            font-weight: bold;
+            color: #002D62;
+            text-transform: uppercase;
+            border-bottom: 1.5px solid #002D62;
+            margin-top: 18px;
             margin-bottom: 10px;
+            padding-bottom: 2px;
         }
 
+        .summary {
+            font-size: 11pt;
+            text-align: justify;
+            margin-bottom: 16px;
+        }
+
+        /* Items (Education, Experience, Projects) */
         .item {
-            margin-bottom: 6px;
+            margin-bottom: 14px;
         }
 
-        .item-header {
+        .item-row-1 {
             display: flex;
             justify-content: space-between;
-            align-items: baseline;
-            margin-bottom: 1px;
+            font-weight: bold;
+            font-size: 11pt;
         }
 
-        .item-subtitle {
-            font-size: 10pt;
-            font-weight: 600;
-            color: var(--text-main);
+        .item-row-2 {
+            display: flex;
+            justify-content: space-between;
             font-style: italic;
+            font-size: 11pt;
+            margin-bottom: 4px;
         }
 
-        .item-date {
-            font-size: 9.5pt;
-            color: var(--text-main);
+        .item-title {
+            color: #000;
+        }
+
+        .item-location, .item-date {
+            font-weight: normal;
+            font-style: normal;
         }
 
         ul {
-            padding-left: 16px;
-            margin-top: 2px;
+            padding-left: 20px;
+            margin-top: 4px;
         }
 
         li {
-            font-size: 9.5pt;
-            color: var(--text-main);
-            margin-bottom: 2px;
+            font-size: 11pt;
+            margin-bottom: 4px;
         }
 
-        .skills-grid {
-            display: grid;
-            grid-template-columns: 140px 1fr;
-            gap: 4px;
-            font-size: 9.5pt;
-            margin-bottom: 2px;
+        /* Skills */
+        .skills-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 11pt;
+        }
+
+        .skills-table td {
+            padding: 2px 0;
+            vertical-align: top;
         }
 
         .skills-category {
-            font-weight: 700;
-            color: var(--text-main);
+            font-weight: bold;
+            width: 180px;
         }
 
         /* Print Settings */
@@ -159,23 +159,16 @@
         <header>
             <h1>Miftahul Islam Tashfin</h1>
             <div class="contact-info">
-                <span>📍 Dhaka, Bangladesh</span>
-                <span>|</span>
-                <span><a href="mailto:mwtsfn@gmail.com">mwtsfn@gmail.com</a></span>
-                <span>|</span>
-                <span>+880 1731 955291</span>
-                <span>|</span>
-                <span><a href="https://linkedin.com/in/tashfinn" target="_blank">linkedin.com/in/tashfinn</a></span>
-                <span>|</span>
-                <span><a href="https://github.com/tashfinn" target="_blank">github.com/tashfinn</a></span>
-                <span>|</span>
-                <span><a href="https://tashfinn.github.io" target="_blank">tashfinn.github.io</a></span>
+                Narayanganj, Dhaka, Bangladesh | +880 1731 955291 | <a href="mailto:mwtsfn@gmail.com">mwtsfn@gmail.com</a><br>
+                <a href="https://tashfinn.github.io" target="_blank">tashfinn.github.io</a> | 
+                <a href="https://linkedin.com/in/tashfinn" target="_blank">linkedin.com/in/tashfinn</a> | 
+                <a href="https://github.com/tashfinn" target="_blank">github.com/tashfinn</a>
             </div>
         </header>
 
         <!-- Summary -->
         <div class="summary">
-            Passionate Software Engineer and Full-Stack Developer with a strong foundation in modern web technologies. Experienced in building scalable, impactful applications, with hands-on leadership experience in technical organizations. Always eager to learn, innovate, and solve complex problems.
+            Passionate and results-driven Software Engineering student at East West University with a strong foundation in modern web technologies. Experienced in full-stack development, database management, and UI/UX design. Demonstrated leadership as an active committee member in technical university clubs. Eager to apply technical knowledge and problem-solving skills to build scalable, user-centered digital solutions.
         </div>
 
         <!-- Education -->
@@ -183,64 +176,60 @@
             <h2 class="section-title">Education</h2>
             
             <div class="item">
-                <div class="item-header">
-                    <h3>East West University</h3>
+                <div class="item-row-1">
+                    <span class="item-title">East West University</span>
+                    <span class="item-location">Dhaka, Bangladesh</span>
+                </div>
+                <div class="item-row-2">
+                    <span>B.Sc. in Computer Science and Engineering, CGPA: 2.81 / 4.00</span>
                     <span class="item-date">2022 - Present</span>
                 </div>
-                <div class="item-header">
-                    <span class="item-subtitle">B.Sc in Computer Science and Engineering</span>
-                    <span class="item-date">Dhaka, Bangladesh</span>
-                </div>
-                <ul>
-                    <li>CGPA: 2.81/4.00</li>
-                </ul>
             </div>
 
             <div class="item">
-                <div class="item-header">
-                    <h3>Government Laboratory High School</h3>
+                <div class="item-row-1">
+                    <span class="item-title">Government Laboratory High School (HSC)</span>
+                    <span class="item-location">Dhaka, Bangladesh</span>
+                </div>
+                <div class="item-row-2">
+                    <span>Higher Secondary Certificate (Science), GPA: 5.00 / 5.00</span>
                     <span class="item-date">2021</span>
                 </div>
-                <div class="item-header">
-                    <span class="item-subtitle">Higher Secondary Certificate (Science)</span>
-                    <span class="item-date">Dhaka, Bangladesh</span>
-                </div>
-                <ul>
-                    <li>GPA: 5.00/5.00</li>
-                </ul>
             </div>
 
             <div class="item">
-                <div class="item-header">
-                    <h3>Tanjimul Ummah Madrasah</h3>
+                <div class="item-row-1">
+                    <span class="item-title">Tanjimul Ummah Madrasah (Dakhil/SSC)</span>
+                    <span class="item-location">Dhaka, Bangladesh</span>
+                </div>
+                <div class="item-row-2">
+                    <span>Secondary School Certificate (Science), GPA: 5.00 / 5.00</span>
                     <span class="item-date">2019</span>
                 </div>
-                <div class="item-header">
-                    <span class="item-subtitle">Secondary School Certificate (Science)</span>
-                    <span class="item-date">Dhaka, Bangladesh</span>
-                </div>
-                <ul>
-                    <li>GPA: 5.00/5.00</li>
-                </ul>
             </div>
         </section>
 
         <!-- Technical Skills -->
         <section>
             <h2 class="section-title">Technical Skills</h2>
-            <div class="skills-grid">
-                <div class="skills-category">Languages:</div>
-                <div>C/C++, Java, Python, PHP, JavaScript, TypeScript</div>
-                
-                <div class="skills-category">Web & Frameworks:</div>
-                <div>React, Next.js, Node.js, Express, HTML5, CSS3, Tailwind CSS</div>
-                
-                <div class="skills-category">Databases & Cloud:</div>
-                <div>MySQL, PostgreSQL, MongoDB, Firebase</div>
-                
-                <div class="skills-category">Tools & Design:</div>
-                <div>Git, Linux, Figma, Android Studio, AutoCAD, UI/UX Design</div>
-            </div>
+            <table class="skills-table">
+                <tr>
+                    <td class="skills-category">Programming Languages</td>
+                    <td>: C, C++, Java, Python, PHP, JavaScript, TypeScript</td>
+                </tr>
+                <tr>
+                    <td class="skills-category">Web & Frameworks</td>
+                    <td>: React, Next.js, Node.js, Express, HTML5, CSS3, Tailwind CSS</td>
+                </tr>
+                <tr>
+                    <td class="skills-category">Databases & Cloud</td>
+                    <td>: MySQL, PostgreSQL, MongoDB, Firebase</td>
+                </tr>
+                <tr>
+                    <td class="skills-category">Tools & Design</td>
+                    <td>: Git, Linux, Figma, Android Studio, AutoCAD, UI/UX Design</td>
+                </tr>
+            </table>
         </section>
 
         <!-- Experience -->
@@ -248,32 +237,32 @@
             <h2 class="section-title">Experience & Leadership</h2>
             
             <div class="item">
-                <div class="item-header">
-                    <h3>Utsho Academic & Exam Care</h3>
+                <div class="item-row-1">
+                    <span class="item-title">Utsho Academic & Exam Care</span>
+                    <span class="item-location">Narayanganj, Bangladesh</span>
+                </div>
+                <div class="item-row-2">
+                    <span>E-Learning Coordinator</span>
                     <span class="item-date">Oct 2025 - Apr 2026</span>
                 </div>
-                <div class="item-header">
-                    <span class="item-subtitle">E-Learning Coordinator</span>
-                    <span class="item-date">Dhaka, Bangladesh</span>
-                </div>
                 <ul>
-                    <li>Coordinated and managed digital learning platforms and infrastructure for students.</li>
-                    <li>Streamlined online exam processes and ensured seamless accessibility for users.</li>
+                    <li>Coordinated and managed digital learning platforms and infrastructure to ensure seamless accessibility for students.</li>
+                    <li>Streamlined online exam operations, cloud hosting parameters, and system architectures to maximize uptime.</li>
                 </ul>
             </div>
 
             <div class="item">
-                <div class="item-header">
-                    <h3>East West University Computer Programming Club</h3>
+                <div class="item-row-1">
+                    <span class="item-title">East West University Computer Programming Club</span>
+                    <span class="item-location">Dhaka, Bangladesh</span>
+                </div>
+                <div class="item-row-2">
+                    <span>Creative Secretary (Oct 2025 - Present) | Sub-Executive (May 2024 - Oct 2025)</span>
                     <span class="item-date">May 2024 - Present</span>
                 </div>
-                <div class="item-header">
-                    <span class="item-subtitle">Creative Secretary (Oct 2025 - Present) | Sub-Executive (May 2024 - Oct 2025)</span>
-                    <span class="item-date">Dhaka, Bangladesh</span>
-                </div>
                 <ul>
-                    <li>Leading creative direction and technical initiatives for major university tech events.</li>
-                    <li>Collaborating with executive members to plan, design, and execute club workshops and competitions.</li>
+                    <li>Leading creative direction, technical initiatives, and coordinating segments for major university tech events.</li>
+                    <li>Supervised volunteers, managed communication channels, and executed club workshops and competitions.</li>
                 </ul>
             </div>
         </section>
@@ -283,47 +272,44 @@
             <h2 class="section-title">Featured Projects</h2>
             
             <div class="item">
-                <div class="item-header">
-                    <h3><a href="https://github.com/tashfinn/ewu-connected" target="_blank" style="color:var(--text-main); text-decoration:none;">EWU ConnectED</a></h3>
+                <div class="item-row-1">
+                    <span class="item-title">EWU ConnectED | Full-Stack University Platform</span>
+                </div>
+                <div class="item-row-2">
+                    <span>Tech Stack: React, Node.js, Express, MongoDB</span>
                 </div>
                 <ul>
-                    <li>Developed a comprehensive full-stack platform designed to connect all students of East West University.</li>
-                    <li>Implemented modern web frameworks to ensure a highly responsive, user-friendly interface.</li>
+                    <li>Developed a comprehensive full-stack platform designed to connect students, streamline communication, and share resources.</li>
+                    <li>Implemented modern web frameworks to ensure a highly responsive, cross-device user-friendly interface.</li>
                 </ul>
             </div>
 
             <div class="item">
-                <div class="item-header">
-                    <h3><a href="https://github.com/tashfinn/Lumiere" target="_blank" style="color:var(--text-main); text-decoration:none;">Lumiere</a></h3>
+                <div class="item-row-1">
+                    <span class="item-title">Lumiere | Modern E-Commerce Platform</span>
+                </div>
+                <div class="item-row-2">
+                    <span>Tech Stack: Next.js, Tailwind CSS, Stripe</span>
                 </div>
                 <ul>
-                    <li>Built a modern E-Commerce platform using scalable web technologies and responsive design principles.</li>
-                    <li>Focused on delivering a seamless shopping experience through optimized performance and UI/UX best practices.</li>
+                    <li>Built a scalable e-commerce platform focusing on seamless shopping experiences and secure checkout flows.</li>
+                    <li>Optimized frontend architecture for fast user response times and clean mobile responsiveness.</li>
                 </ul>
             </div>
 
             <div class="item">
-                <div class="item-header">
-                    <h3><a href="https://github.com/tashfinn/DarkSight" target="_blank" style="color:var(--text-main); text-decoration:none;">DarkSight</a></h3>
+                <div class="item-row-1">
+                    <span class="item-title">DarkSight | Browser Extension</span>
+                </div>
+                <div class="item-row-2">
+                    <span>Tech Stack: JavaScript, HTML/CSS, Chrome Extension API</span>
                 </div>
                 <ul>
-                    <li>Created a browser extension designed to actively detect and countermeasure dark UI patterns on e-commerce sites.</li>
-                    <li>Utilized DOM manipulation and pattern recognition algorithms to protect users from deceptive web practices.</li>
+                    <li>Created an extension to actively detect and countermeasure manipulative dark UI patterns on e-commerce sites.</li>
+                    <li>Utilized DOM manipulation and pattern recognition algorithms to protect consumers from deceptive web practices.</li>
                 </ul>
             </div>
         </section>
-
-        <!-- Achievements placeholder for user to add later -->
-        <!-- 
-        <section>
-            <h2 class="section-title">Achievements</h2>
-            <div class="item">
-                <ul>
-                    <li>Add your scholarships or hackathon wins here...</li>
-                </ul>
-            </div>
-        </section>
-        -->
 
     </div>
 
