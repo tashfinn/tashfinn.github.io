@@ -188,13 +188,16 @@ a {
     z-index: 1000;
     padding: 1.5rem 0;
     transition: var(--transition);
+    border-bottom: 1px solid transparent;
 }
 
 .navbar.scrolled {
     padding: 1rem 0;
     background: rgba(10, 10, 10, 0.8);
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--glass-border);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 
 .nav-content {
@@ -262,6 +265,7 @@ body.light-mode .navbar.scrolled {
 /* Hero Section */
 .hero {
     min-height: 100vh;
+    min-height: 100dvh;
     display: flex;
     align-items: center;
     position: relative;
