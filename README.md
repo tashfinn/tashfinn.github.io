@@ -1,6 +1,6 @@
 # Miftahul Islam Tashfin - Personal Portfolio Website
 
-Welcome to the source code of my personal portfolio website, hosted live at [tashfin5.github.io](https://tashfin5.github.io).
+Welcome to the source code of my personal portfolio website, hosted live at [tashfinn.github.io](https://tashfinn.github.io).
 
 ## 🎨 Overview
 
@@ -27,15 +27,16 @@ Because this project uses vanilla web technologies, there are no dependencies to
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/tashfin5/tashfin5.github.io.git
+   git clone https://github.com/tashfinn/tashfinn.github.io.git
    ```
 2. Simply open `index.html` in any modern web browser to view the site instantly.
 
 ## 📫 Connect with Me
 
-- **LinkedIn:** [Miftahul Islam Tashfin](https://www.linkedin.com/in/miftahul-islam-tashfin-499234204/)
+- **LinkedIn:** [Miftahul Islam Tashfin](https://www.linkedin.com/in/tashfinn/)
 - **Email:** [mwtsfn@gmail.com](mailto:mwtsfn@gmail.com)
 
 ---
 
 *Designed and engineered with passion.*
+
