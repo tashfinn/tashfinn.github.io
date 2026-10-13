@@ -1,10 +1,10 @@
-/**
- * Tashfin Portfolio — Majd-Inspired Dynamic Interactions
+﻿/**
+ * Tashfin Portfolio — Dymas Alfin Editorial Dribbble Theme Interactions
  */
 
 document.addEventListener("DOMContentLoaded", () => {
     // 1. Current Year in Footer
-    const yearEl = document.getElementById("current-year") || document.getElementById("year");
+    const yearEl = document.getElementById("current-year");
     if (yearEl) {
         yearEl.textContent = new Date().getFullYear();
     }
@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // 4. Framer-Grade Scroll Reveal Animations
+    // 4. Scroll Reveal Animations
     const revealElements = document.querySelectorAll(".reveal");
     if (revealElements.length > 0) {
         const revealObserver = new IntersectionObserver((entries, observer) => {
@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
         revealElements.forEach(el => revealObserver.observe(el));
     }
 
-    // 5. Smooth Anchor Scrolling with Offsets
+    // 5. Smooth Anchor Scrolling with Header Offset
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener("click", function (e) {
             const targetId = this.getAttribute("href");
@@ -80,4 +80,82 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     });
+
+    // 6. Selected Work Category Filtering
+    const filterBtns = document.querySelectorAll(".filter-btn");
+    const projectCards = document.querySelectorAll(".project-card");
+
+    if (filterBtns.length > 0 && projectCards.length > 0) {
+        filterBtns.forEach(btn => {
+            btn.addEventListener("click", () => {
+                const filter = btn.getAttribute("data-filter");
+
+                filterBtns.forEach(b => b.classList.remove("active"));
+                btn.classList.add("active");
+
+                projectCards.forEach(card => {
+                    const category = card.getAttribute("data-category");
+                    if (filter === "all" || category === filter) {
+                        card.style.display = "flex";
+                        setTimeout(() => {
+                            card.style.opacity = "1";
+                            card.style.transform = "translateY(0)";
+                        }, 20);
+                    } else {
+                        card.style.opacity = "0";
+                        card.style.transform = "translateY(16px)";
+                        setTimeout(() => {
+                            card.style.display = "none";
+                        }, 280);
+                    }
+                });
+            });
+        });
+    }
+
+    // 7. Service Accordion Interaction (Frame 00:08 - 00:10)
+    const accordionItems = document.querySelectorAll(".service-accordion-item");
+    if (accordionItems.length > 0) {
+        accordionItems.forEach(item => {
+            const header = item.querySelector(".service-item-header");
+            if (!header) return;
+
+            header.addEventListener("click", () => {
+                const isActive = item.classList.contains("active");
+
+                // Close all accordion items
+                accordionItems.forEach(otherItem => {
+                    otherItem.classList.remove("active");
+                    const icon = otherItem.querySelector(".service-toggle-icon");
+                    if (icon) {
+                        icon.className = "ph ph-plus service-toggle-icon";
+                    }
+                });
+
+                // Toggle current item
+                if (!isActive) {
+                    item.classList.add("active");
+                    const icon = item.querySelector(".service-toggle-icon");
+                    if (icon) {
+                        icon.className = "ph ph-minus service-toggle-icon";
+                    }
+                }
+            });
+        });
+    }
+
+    // 8. Interactive Contact Drawer Toggle
+    const contactBtn = document.getElementById("contact-toggle-btn");
+    const contactDrawer = document.getElementById("contact-drawer");
+    if (contactBtn && contactDrawer) {
+        contactBtn.addEventListener("click", () => {
+            const isOpen = contactDrawer.classList.toggle("open");
+            contactBtn.textContent = isOpen ? "Close Panel ✕" : "Contact Me ↗";
+            if (isOpen) {
+                setTimeout(() => {
+                    contactDrawer.scrollIntoView({ behavior: "smooth", block: "nearest" });
+                }, 150);
+            }
+        });
+    }
 });
