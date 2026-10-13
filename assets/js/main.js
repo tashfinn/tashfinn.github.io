@@ -23,10 +23,17 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // 2b. Interactive 3D Parallax Tilt on Portrait Photo Card
+    // 2b. Interactive 3D Parallax Tilt & Scroll Animation on Portrait Photo
     const portraitCard = document.getElementById("hero-portrait-card");
     const photoWrapper = portraitCard ? portraitCard.querySelector(".portrait-photo-wrapper") : null;
     if (portraitCard && photoWrapper) {
+        let isHovered = false;
+
+        portraitCard.addEventListener("mouseenter", () => {
+            isHovered = true;
+            photoWrapper.style.animation = "none";
+        });
+
         portraitCard.addEventListener("mousemove", (e) => {
             const rect = portraitCard.getBoundingClientRect();
             const x = e.clientX - rect.left;
@@ -36,17 +43,39 @@ document.addEventListener("DOMContentLoaded", () => {
             const rotateX = ((y - centerY) / centerY) * -9;
             const rotateY = ((x - centerX) / centerX) * 9;
 
-            photoWrapper.style.animation = "none";
             photoWrapper.style.transform = `perspective(800px) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg) scale3d(1.025, 1.025, 1.025)`;
         });
 
         portraitCard.addEventListener("mouseleave", () => {
+            isHovered = false;
             photoWrapper.style.transform = "perspective(800px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)";
             setTimeout(() => {
-                photoWrapper.style.animation = "portraitFloat 6.5s ease-in-out infinite";
-                photoWrapper.style.transform = "";
+                if (!isHovered) {
+                    photoWrapper.style.animation = "portraitFloat 6.5s ease-in-out infinite";
+                    photoWrapper.style.transform = "";
+                }
             }, 350);
         });
+
+        // Scroll-Driven Parallax Motion
+        let scrollTicking = false;
+        window.addEventListener("scroll", () => {
+            if (!scrollTicking) {
+                window.requestAnimationFrame(() => {
+                    if (!isHovered) {
+                        const rect = portraitCard.getBoundingClientRect();
+                        const windowHeight = window.innerHeight;
+                        if (rect.top < windowHeight && rect.bottom > 0) {
+                            const scrollProgress = (windowHeight - rect.top) / (windowHeight + rect.height);
+                            const parallaxY = (scrollProgress - 0.5) * 36;
+                            photoWrapper.style.transform = `translate3d(0, ${parallaxY.toFixed(1)}px, 0)`;
+                        }
+                    }
+                    scrollTicking = false;
+                });
+                scrollTicking = true;
+            }
+        }, { passive: true });
     }
 
     // 3. Live Dhaka Local Time Badge
