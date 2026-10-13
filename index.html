@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -15,10 +15,10 @@
     <!-- Favicon -->
     <link rel="icon" href="assets/TashfinProfileCropped.jpg" type="image/jpeg">
 
-    <!-- Google Fonts: Plus Jakarta Sans -->
+    <!-- Google Fonts: Outfit (Headings) & Plus Jakarta Sans (Body) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,700&display=swap" rel="stylesheet">
     
     <!-- Phosphor Icons -->
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
@@ -28,225 +28,349 @@
 </head>
 <body>
 
-    <!-- Floating Top Navigation (Dribbble Video Style) -->
+    <!-- Floating Glass Navbar -->
     <header class="navbar">
         <nav class="nav-content">
-            <div class="nav-status-pill">
-                <span class="status-dot"></span>
-                <span>Available for New Project</span>
-            </div>
+            <a href="#" class="nav-logo">Tashfin<span>.</span></a>
 
             <ul class="nav-links" id="nav-links">
-                <li><a href="#work">Work <span class="nav-count">[06]</span></a></li>
-                <li><a href="#service">Service <span class="nav-count">[04]</span></a></li>
-                <li><a href="#experience">Experience <span class="nav-count">[03]</span></a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#experience">Roadmap</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li><a href="assets/Miftahul_Islam_Tashfin_Resume.pdf" target="_blank">Resume ↗</a></li>
             </ul>
 
-            <a href="#contact" class="btn-nav-cta">Let's Talk ↗</a>
-
-            <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Toggle navigation menu">
-                <i class="ph ph-list"></i>
-            </button>
+            <div class="nav-right-actions">
+                <div class="status-indicator-pill">
+                    <span class="beacon-dot"></span>
+                    <span>Available for hire</span>
+                </div>
+                <a href="assets/Miftahul_Islam_Tashfin_Resume.pdf" target="_blank" class="btn-nav-resume">
+                    Resume ↗
+                </a>
+                <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Toggle navigation menu">
+                    <i class="ph ph-list"></i>
+                </button>
+            </div>
         </nav>
     </header>
 
     <main>
-        <!-- Hero Section (Dribbble Frame 00:01 - 00:03) -->
-        <section id="hero" class="hero">
+        <!-- Hero Section Bento Grid -->
+        <section id="about" class="hero">
             <div class="container">
-                <!-- Giant Split Typography Name -->
-                <div class="hero-name-banner reveal">
-                    <h1 class="hero-name-outline">MIFTAHUL</h1>
-                    <h1 class="hero-name-solid">TASHFIN</h1>
-                </div>
+                <div class="hero-bento-grid">
+                    <!-- Bento Card 1: Main Introduction -->
+                    <div class="bento-card hero-main-card reveal">
+                        <div>
+                            <div class="hero-greetings">
+                                <span>👋</span>
+                                <span>Hi, I'm Miftahul Islam Tashfin</span>
+                            </div>
+                            <h1 class="hero-main-title">
+                                Crafting <span class="emerald-text">high-performance</span> web systems &amp; <span class="gradient-text">intelligent digital products.</span>
+                            </h1>
+                            <p class="hero-main-desc">
+                                4th-year Software Engineering Undergraduate at East West University &amp; Creative Secretary at EWU Computer Programming Club. I specialize in building distributed backend architectures, full-stack platforms, and mobile apps.
+                            </p>
+                        </div>
 
-                <!-- Lower Hero Grid: Left Bio, Center Portrait, Right Socials -->
-                <div class="hero-lower-grid">
-                    <div class="hero-left-col reveal">
-                        <h2 class="hero-role-title">Software Engineer &amp; Full-Stack Developer</h2>
-                        <p class="hero-role-desc">
-                            4th-year Software Engineering undergraduate at East West University &amp; Creative Secretary at EWUCPC. Building high-performance web systems, distributed architectures, and intuitive mobile applications.
-                        </p>
-                        <a href="#contact" class="btn-collaborate">Let's collaborate ↗</a>
-                    </div>
+                        <div class="hero-actions-row">
+                            <a href="#contact" class="btn-primary-glow">
+                                <span>Get In Touch</span>
+                                <i class="ph ph-arrow-up-right"></i>
+                            </a>
+                            <a href="assets/Miftahul_Islam_Tashfin_Resume.pdf" target="_blank" class="btn-secondary-ghost">
+                                <span>View Resume</span>
+                                <i class="ph ph-file-pdf"></i>
+                            </a>
 
-                    <div class="hero-center-col reveal">
-                        <div class="hero-portrait-frame">
-                            <img src="assets/TashfinV.jpg" alt="Miftahul Islam Tashfin" loading="eager">
+                            <div class="social-pill-group">
+                                <a href="https://github.com/tashfinn" target="_blank" class="social-pill-btn" aria-label="GitHub">
+                                    <i class="ph ph-github-logo"></i>
+                                </a>
+                                <a href="https://www.linkedin.com/in/tashfinn/" target="_blank" class="social-pill-btn" aria-label="LinkedIn">
+                                    <i class="ph ph-linkedin-logo"></i>
+                                </a>
+                                <a href="https://www.facebook.com/FinnX5/" target="_blank" class="social-pill-btn" aria-label="Facebook">
+                                    <i class="ph ph-facebook-logo"></i>
+                                </a>
+                                <a href="https://www.instagram.com/m_tashfin/" target="_blank" class="social-pill-btn" aria-label="Instagram">
+                                    <i class="ph ph-instagram-logo"></i>
+                                </a>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="hero-right-col reveal">
-                        <a href="https://github.com/tashfinn" target="_blank" class="social-link-row">
-                            <i class="ph ph-github-logo"></i> GitHub ↗
-                        </a>
-                        <a href="https://www.linkedin.com/in/tashfinn/" target="_blank" class="social-link-row">
-                            <i class="ph ph-linkedin-logo"></i> LinkedIn ↗
-                        </a>
-                        <a href="https://www.facebook.com/FinnX5/" target="_blank" class="social-link-row">
-                            <i class="ph ph-facebook-logo"></i> Facebook ↗
-                        </a>
-                        <a href="https://www.instagram.com/m_tashfin/" target="_blank" class="social-link-row">
-                            <i class="ph ph-instagram-logo"></i> Instagram ↗
-                        </a>
+                    <!-- Bento Card 2: Interactive Portrait Frame -->
+                    <div class="bento-card hero-portrait-card reveal">
+                        <div class="portrait-photo-wrapper">
+                            <img src="assets/TashfinV.jpg" alt="Miftahul Islam Tashfin" loading="eager">
+                            <div class="portrait-badge-top">
+                                <i class="ph ph-student"></i>
+                                <span>Senior Undergrad @ EWU</span>
+                            </div>
+                            <div class="portrait-info-bottom">
+                                <div>
+                                    <div class="portrait-meta-name">Tashfin</div>
+                                    <div class="portrait-meta-role">Full-Stack Engineer</div>
+                                </div>
+                                <div class="portrait-clock-pill">
+                                    <span class="beacon-dot"></span>
+                                    <span id="dhaka-time-badge">Dhaka: GMT+6</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Bento Row 3: Metrics & Stats -->
+                    <div class="hero-stats-row reveal">
+                        <div class="bento-card stat-bento-card">
+                            <div class="stat-number">4th</div>
+                            <div class="stat-label">Year Software Engineering Undergrad</div>
+                        </div>
+                        <div class="bento-card stat-bento-card">
+                            <div class="stat-number">20+</div>
+                            <div class="stat-label">Projects &amp; Architectures Built</div>
+                        </div>
+                        <div class="bento-card stat-bento-card">
+                            <div class="stat-number">3+</div>
+                            <div class="stat-label">Leadership &amp; Technical Roles</div>
+                        </div>
+                        <div class="bento-card stat-bento-card">
+                            <div class="stat-number">100%</div>
+                            <div class="stat-label">Clean Code &amp; Dedicated Delivery</div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Selected Work Section (Dribbble Frame 00:05 - 00:07) -->
-        <section id="work" class="section">
+        <!-- Infinite Tech Stack Marquee -->
+        <section class="marquee-section" aria-label="Technologies">
+            <div class="marquee-track">
+                <span class="marquee-item"><i class="ph-fill ph-code"></i> React.js</span>
+                <span class="marquee-separator">•</span>
+                <span class="marquee-item"><i class="ph-fill ph-lightning"></i> Next.js</span>
+                <span class="marquee-separator">•</span>
+                <span class="marquee-item"><i class="ph-fill ph-browsers"></i> Node.js &amp; Express</span>
+                <span class="marquee-separator">•</span>
+                <span class="marquee-item"><i class="ph-fill ph-device-mobile"></i> Flutter &amp; Dart</span>
+                <span class="marquee-separator">•</span>
+                <span class="marquee-item"><i class="ph-fill ph-database"></i> PostgreSQL &amp; Neon DB</span>
+                <span class="marquee-separator">•</span>
+                <span class="marquee-item"><i class="ph-fill ph-database"></i> MySQL &amp; MongoDB</span>
+                <span class="marquee-separator">•</span>
+                <span class="marquee-item"><i class="ph-fill ph-cube"></i> Docker &amp; CI/CD</span>
+                <span class="marquee-separator">•</span>
+                <span class="marquee-item"><i class="ph-fill ph-git-branch"></i> Git &amp; GitHub</span>
+                <span class="marquee-separator">•</span>
+                <span class="marquee-item"><i class="ph-fill ph-paint-brush"></i> Tailwind CSS</span>
+                <span class="marquee-separator">•</span>
+                <span class="marquee-item"><i class="ph-fill ph-plugs"></i> RESTful APIs</span>
+                <span class="marquee-separator">•</span>
+                <span class="marquee-item"><i class="ph-fill ph-broadcast"></i> WebSockets</span>
+                <span class="marquee-separator">•</span>
+                <span class="marquee-item"><i class="ph-fill ph-figma-logo"></i> Figma Design Systems</span>
+                <span class="marquee-separator">•</span>
+                <!-- Duplicate set for seamless loop -->
+                <span class="marquee-item"><i class="ph-fill ph-code"></i> React.js</span>
+                <span class="marquee-separator">•</span>
+                <span class="marquee-item"><i class="ph-fill ph-lightning"></i> Next.js</span>
+                <span class="marquee-separator">•</span>
+                <span class="marquee-item"><i class="ph-fill ph-browsers"></i> Node.js &amp; Express</span>
+                <span class="marquee-separator">•</span>
+                <span class="marquee-item"><i class="ph-fill ph-device-mobile"></i> Flutter &amp; Dart</span>
+                <span class="marquee-separator">•</span>
+                <span class="marquee-item"><i class="ph-fill ph-database"></i> PostgreSQL &amp; Neon DB</span>
+                <span class="marquee-separator">•</span>
+                <span class="marquee-item"><i class="ph-fill ph-database"></i> MySQL &amp; MongoDB</span>
+                <span class="marquee-separator">•</span>
+                <span class="marquee-item"><i class="ph-fill ph-cube"></i> Docker &amp; CI/CD</span>
+                <span class="marquee-separator">•</span>
+                <span class="marquee-item"><i class="ph-fill ph-git-branch"></i> Git &amp; GitHub</span>
+                <span class="marquee-separator">•</span>
+                <span class="marquee-item"><i class="ph-fill ph-paint-brush"></i> Tailwind CSS</span>
+                <span class="marquee-separator">•</span>
+                <span class="marquee-item"><i class="ph-fill ph-plugs"></i> RESTful APIs</span>
+                <span class="marquee-separator">•</span>
+                <span class="marquee-item"><i class="ph-fill ph-broadcast"></i> WebSockets</span>
+                <span class="marquee-separator">•</span>
+                <span class="marquee-item"><i class="ph-fill ph-figma-logo"></i> Figma Design Systems</span>
+                <span class="marquee-separator">•</span>
+            </div>
+        </section>
+
+        <!-- Featured Projects Bento Showcase -->
+        <section id="projects" class="section">
             <div class="container">
-                <div class="section-header-wrap reveal">
-                    <div class="watermark-text" aria-hidden="true">PORTFOLIO</div>
-                    <h2 class="section-label-title">
-                        <span><span class="slash">/</span>SELECTED WORK</span>
-                        <span class="section-right-meta">[06 Projects]</span>
-                    </h2>
+                <div class="section-header reveal">
+                    <span class="section-badge"><i class="ph ph-folder-open"></i> PORTFOLIO WORK</span>
+                    <h2 class="section-title">Featured Projects</h2>
+                    <p class="section-subtitle">Real-world applications spanning AI-augmented browser engines, collaborative university platforms, and full-stack software.</p>
                 </div>
 
-                <div class="work-controls-row reveal">
-                    <div class="filter-pills-wrap">
-                        <button class="filter-btn active" data-filter="all">All</button>
+                <div class="projects-controls reveal">
+                    <div class="filter-pills">
+                        <button class="filter-btn active" data-filter="all">All Projects</button>
                         <button class="filter-btn" data-filter="fullstack">Full-Stack</button>
                         <button class="filter-btn" data-filter="mobile-systems">Mobile / Systems</button>
                     </div>
-                    <a href="https://github.com/tashfinn?tab=repositories" target="_blank" class="view-all-link">
-                        View All Repositories ↗
+                    <a href="https://github.com/tashfinn?tab=repositories" target="_blank" class="github-all-link">
+                        <span>Explore All Repositories on GitHub</span>
+                        <i class="ph ph-arrow-up-right"></i>
                     </a>
                 </div>
 
-                <div class="projects-grid">
-                    <!-- Project 1: DarkSight -->
-                    <div class="project-card reveal" data-category="mobile-systems">
+                <div class="projects-bento-grid">
+                    <!-- Project 1: DarkSight (Wide Featured Bento Card) -->
+                    <div class="bento-card project-bento-card featured-wide reveal" data-category="mobile-systems">
                         <a href="https://github.com/tashfinn/darksight" target="_blank" style="text-decoration:none; color:inherit; display:flex; flex-direction:column; height:100%;">
-                            <div class="project-thumb-frame">
-                                <span class="project-badge-overlay">Capstone / AI &amp; AdBlock</span>
-                                <div class="project-thumb-content">
-                                    <i class="ph ph-shield-check"></i>
-                                </div>
+                            <div class="project-thumb-preview">
+                                <span class="project-badge-tag">⭐ Capstone / AI &amp; AdBlock</span>
+                                <i class="ph ph-shield-check main-icon"></i>
                             </div>
-                            <div class="project-meta-bottom">
-                                <h3 class="project-card-title">
-                                    <span>DarkSight Engine</span>
-                                    <i class="ph ph-arrow-up-right"></i>
-                                </h3>
-                                <div class="project-card-subline">
-                                    <span>Local AI Pattern Detection &amp; DNR Filtering</span>
-                                    <span>2025</span>
+                            <div class="project-info-block">
+                                <div class="project-title-row">
+                                    <h3 class="project-title">DarkSight Engine</h3>
+                                    <i class="ph ph-arrow-up-right project-arrow-icon"></i>
                                 </div>
+                                <p class="project-desc-text">
+                                    An intelligent Chrome extension combining local AI (DeepSeek-R1 &amp; Qwen2.5-VL via Ollama / Puter.js) with Declarative Net Request filtering to expose manipulative dark patterns and block malicious popunders.
+                                </p>
+                            </div>
+                            <div class="project-tech-tags">
+                                <span class="tech-tag-pill">JavaScript</span>
+                                <span class="tech-tag-pill">Local LLM / Vision</span>
+                                <span class="tech-tag-pill">Manifest V3</span>
+                                <span class="tech-tag-pill">uBlock DNR</span>
+                                <span class="tech-tag-pill">AI Privacy</span>
                             </div>
                         </a>
                     </div>
 
                     <!-- Project 2: EWU ConnectED -->
-                    <div class="project-card reveal" data-category="fullstack">
+                    <div class="bento-card project-bento-card reveal" data-category="fullstack">
                         <a href="https://github.com/tashfinn/ewu-connected" target="_blank" style="text-decoration:none; color:inherit; display:flex; flex-direction:column; height:100%;">
-                            <div class="project-thumb-frame">
-                                <span class="project-badge-overlay">Academic / Full-Stack</span>
-                                <div class="project-thumb-content">
-                                    <i class="ph ph-users-three"></i>
-                                </div>
+                            <div class="project-thumb-preview">
+                                <span class="project-badge-tag">Academic Portal</span>
+                                <i class="ph ph-users-three main-icon"></i>
                             </div>
-                            <div class="project-meta-bottom">
-                                <h3 class="project-card-title">
-                                    <span>EWU ConnectED</span>
-                                    <i class="ph ph-arrow-up-right"></i>
-                                </h3>
-                                <div class="project-card-subline">
-                                    <span>Peer Academic &amp; Collaboration Platform</span>
-                                    <span>2024</span>
+                            <div class="project-info-block">
+                                <div class="project-title-row">
+                                    <h3 class="project-title">EWU ConnectED</h3>
+                                    <i class="ph ph-arrow-up-right project-arrow-icon"></i>
                                 </div>
+                                <p class="project-desc-text">
+                                    University student platform built to facilitate academic resource sharing, discussion feeds, and peer study collaboration.
+                                </p>
+                            </div>
+                            <div class="project-tech-tags">
+                                <span class="tech-tag-pill">React</span>
+                                <span class="tech-tag-pill">Node.js</span>
+                                <span class="tech-tag-pill">Express</span>
+                                <span class="tech-tag-pill">MongoDB</span>
                             </div>
                         </a>
                     </div>
 
                     <!-- Project 3: MindQuery -->
-                    <div class="project-card reveal" data-category="fullstack">
+                    <div class="bento-card project-bento-card reveal" data-category="fullstack">
                         <a href="https://github.com/tashfinn/mindquery" target="_blank" style="text-decoration:none; color:inherit; display:flex; flex-direction:column; height:100%;">
-                            <div class="project-thumb-frame">
-                                <span class="project-badge-overlay">Serverless / Edge Compute</span>
-                                <div class="project-thumb-content">
-                                    <i class="ph ph-brain"></i>
-                                </div>
+                            <div class="project-thumb-preview">
+                                <span class="project-badge-tag">Edge Serverless</span>
+                                <i class="ph ph-brain main-icon"></i>
                             </div>
-                            <div class="project-meta-bottom">
-                                <h3 class="project-card-title">
-                                    <span>MindQuery</span>
-                                    <i class="ph ph-arrow-up-right"></i>
-                                </h3>
-                                <div class="project-card-subline">
-                                    <span>Edge Quiz &amp; Neon Postgres Knowledge Engine</span>
-                                    <span>2024</span>
+                            <div class="project-info-block">
+                                <div class="project-title-row">
+                                    <h3 class="project-title">MindQuery</h3>
+                                    <i class="ph ph-arrow-up-right project-arrow-icon"></i>
                                 </div>
+                                <p class="project-desc-text">
+                                    Interactive quiz and knowledge verification platform deployed on Vercel Edge compute with Neon serverless PostgreSQL.
+                                </p>
+                            </div>
+                            <div class="project-tech-tags">
+                                <span class="tech-tag-pill">Next.js</span>
+                                <span class="tech-tag-pill">PostgreSQL</span>
+                                <span class="tech-tag-pill">Neon DB</span>
+                                <span class="tech-tag-pill">Vercel Edge</span>
                             </div>
                         </a>
                     </div>
 
-                    <!-- Project 4: Lumiere -->
-                    <div class="project-card reveal" data-category="fullstack">
+                    <!-- Project 4: Lumiere Storefront -->
+                    <div class="bento-card project-bento-card reveal" data-category="fullstack">
                         <a href="https://github.com/tashfinn/Lumiere" target="_blank" style="text-decoration:none; color:inherit; display:flex; flex-direction:column; height:100%;">
-                            <div class="project-thumb-frame">
-                                <span class="project-badge-overlay">E-Commerce / Architecture</span>
-                                <div class="project-thumb-content">
-                                    <i class="ph ph-shopping-bag"></i>
-                                </div>
+                            <div class="project-thumb-preview">
+                                <span class="project-badge-tag">E-Commerce</span>
+                                <i class="ph ph-shopping-bag main-icon"></i>
                             </div>
-                            <div class="project-meta-bottom">
-                                <h3 class="project-card-title">
-                                    <span>Lumiere Storefront</span>
-                                    <i class="ph ph-arrow-up-right"></i>
-                                </h3>
-                                <div class="project-card-subline">
-                                    <span>Luxury Fragrance Catalog &amp; Cart State</span>
-                                    <span>2024</span>
+                            <div class="project-info-block">
+                                <div class="project-title-row">
+                                    <h3 class="project-title">Lumiere Storefront</h3>
+                                    <i class="ph ph-arrow-up-right project-arrow-icon"></i>
                                 </div>
+                                <p class="project-desc-text">
+                                    Luxury fragrance online storefront featuring reactive cart state management, product filtering, and smooth dark aesthetics.
+                                </p>
+                            </div>
+                            <div class="project-tech-tags">
+                                <span class="tech-tag-pill">React</span>
+                                <span class="tech-tag-pill">Tailwind CSS</span>
+                                <span class="tech-tag-pill">Cart State</span>
+                                <span class="tech-tag-pill">REST APIs</span>
                             </div>
                         </a>
                     </div>
 
-                    <!-- Project 5: Utsho App -->
-                    <div class="project-card reveal" data-category="mobile-systems">
+                    <!-- Project 5: Utsho Mobile App -->
+                    <div class="bento-card project-bento-card reveal" data-category="mobile-systems">
                         <a href="https://github.com/tashfinn/Utsho-App" target="_blank" style="text-decoration:none; color:inherit; display:flex; flex-direction:column; height:100%;">
-                            <div class="project-thumb-frame">
-                                <span class="project-badge-overlay">Mobile / Android</span>
-                                <div class="project-thumb-content">
-                                    <i class="ph ph-device-mobile"></i>
-                                </div>
+                            <div class="project-thumb-preview">
+                                <span class="project-badge-tag">Mobile / Flutter</span>
+                                <i class="ph ph-device-mobile main-icon"></i>
                             </div>
-                            <div class="project-meta-bottom">
-                                <h3 class="project-card-title">
-                                    <span>Utsho Mobile App</span>
-                                    <i class="ph ph-arrow-up-right"></i>
-                                </h3>
-                                <div class="project-card-subline">
-                                    <span>Student Coaching &amp; Exam Management Suite</span>
-                                    <span>2024</span>
+                            <div class="project-info-block">
+                                <div class="project-title-row">
+                                    <h3 class="project-title">Utsho Mobile App</h3>
+                                    <i class="ph ph-arrow-up-right project-arrow-icon"></i>
                                 </div>
+                                <p class="project-desc-text">
+                                    Comprehensive mobile coaching management app delivering real-time exam schedules, student grading, and parent communications.
+                                </p>
+                            </div>
+                            <div class="project-tech-tags">
+                                <span class="tech-tag-pill">Flutter</span>
+                                <span class="tech-tag-pill">Android SDK</span>
+                                <span class="tech-tag-pill">Cloud DB</span>
+                                <span class="tech-tag-pill">Management</span>
                             </div>
                         </a>
                     </div>
 
                     <!-- Project 6: TicTacToe Online -->
-                    <div class="project-card reveal" data-category="fullstack">
+                    <div class="bento-card project-bento-card reveal" data-category="fullstack">
                         <a href="https://github.com/tashfinn/TicTacToe-Online" target="_blank" style="text-decoration:none; color:inherit; display:flex; flex-direction:column; height:100%;">
-                            <div class="project-thumb-frame">
-                                <span class="project-badge-overlay">Multiplayer / WebSockets</span>
-                                <div class="project-thumb-content">
-                                    <i class="ph ph-game-controller"></i>
-                                </div>
+                            <div class="project-thumb-preview">
+                                <span class="project-badge-tag">Real-Time Sockets</span>
+                                <i class="ph ph-game-controller main-icon"></i>
                             </div>
-                            <div class="project-meta-bottom">
-                                <h3 class="project-card-title">
-                                    <span>TicTacToe Online</span>
-                                    <i class="ph ph-arrow-up-right"></i>
-                                </h3>
-                                <div class="project-card-subline">
-                                    <span>Real-Time Web &amp; Desktop Socket Arena</span>
-                                    <span>2023</span>
+                            <div class="project-info-block">
+                                <div class="project-title-row">
+                                    <h3 class="project-title">TicTacToe Online</h3>
+                                    <i class="ph ph-arrow-up-right project-arrow-icon"></i>
                                 </div>
+                                <p class="project-desc-text">
+                                    Synchronized multiplayer game running across browser web clients and desktop Java Swing clients over low-latency WebSockets.
+                                </p>
+                            </div>
+                            <div class="project-tech-tags">
+                                <span class="tech-tag-pill">WebSockets</span>
+                                <span class="tech-tag-pill">Java</span>
+                                <span class="tech-tag-pill">Real-Time</span>
+                                <span class="tech-tag-pill">Multiplayer</span>
                             </div>
                         </a>
                     </div>
@@ -254,202 +378,201 @@
             </div>
         </section>
 
-        <!-- Service Section (Dribbble Frame 00:08 - 00:10 Accordion) -->
-        <section id="service" class="section">
+        <!-- Services & Capabilities Bento Grid -->
+        <section id="services" class="section">
             <div class="container">
-                <div class="section-header-wrap reveal">
-                    <div class="watermark-text" aria-hidden="true">SERVICE</div>
-                    <h2 class="section-label-title">
-                        <span><span class="slash">/</span>SERVICE</span>
-                        <span class="section-right-meta">Capabilities</span>
-                    </h2>
+                <div class="section-header reveal">
+                    <span class="section-badge"><i class="ph ph-sparkle"></i> CAPABILITIES</span>
+                    <h2 class="section-title">Services &amp; Technical Capabilities</h2>
+                    <p class="section-subtitle">Delivering robust technical solutions across the entire product lifecycle from system design to high-throughput deployment.</p>
                 </div>
 
-                <div class="services-accordion-list reveal">
-                    <!-- Service 1: Active by default (Dark card state as shown in video) -->
-                    <div class="service-accordion-item active" data-index="0">
-                        <button class="service-item-header" type="button">
-                            <span class="service-item-title">FULL-STACK WEB DEVELOPMENT</span>
-                            <i class="ph ph-minus service-toggle-icon"></i>
-                        </button>
-                        <div class="service-item-body">
-                            <div class="service-body-content">
-                                <p class="service-desc-text">
-                                    Engineering end-to-end web architectures, high-performance API layers, and reactive user interfaces with optimized state management, server-side caching, and secure authentication flows.
-                                </p>
-                                <div class="service-tags-pillbox">
-                                    <span class="service-pill">React.js</span>
-                                    <span class="service-pill">Node.js</span>
-                                    <span class="service-pill">Express</span>
-                                    <span class="service-pill">Next.js</span>
-                                    <span class="service-pill">REST APIs</span>
-                                    <span class="service-pill">WebSockets</span>
-                                </div>
-                            </div>
+                <div class="services-bento-grid">
+                    <!-- Service 1 -->
+                    <div class="bento-card service-bento-card reveal">
+                        <div class="service-icon-wrap"><i class="ph ph-code"></i></div>
+                        <h3 class="service-title">Full-Stack Web Development</h3>
+                        <p class="service-desc">
+                            Engineering resilient, high-speed web platforms with reactive frontend components, scalable Node.js/Express backends, secure token authentication, and robust RESTful API endpoints.
+                        </p>
+                        <div class="service-pills">
+                            <span class="service-pill-item">React.js</span>
+                            <span class="service-pill-item">Next.js</span>
+                            <span class="service-pill-item">Node.js</span>
+                            <span class="service-pill-item">Express</span>
+                            <span class="service-pill-item">REST APIs</span>
+                            <span class="service-pill-item">WebSockets</span>
                         </div>
                     </div>
 
                     <!-- Service 2 -->
-                    <div class="service-accordion-item" data-index="1">
-                        <button class="service-item-header" type="button">
-                            <span class="service-item-title">MOBILE APPLICATION ENGINEERING</span>
-                            <i class="ph ph-plus service-toggle-icon"></i>
-                        </button>
-                        <div class="service-item-body">
-                            <div class="service-body-content">
-                                <p class="service-desc-text">
-                                    Crafting cross-platform native mobile applications focused on fluid 60fps animations, robust offline caching, device hardware integration, and synchronous data syncing.
-                                </p>
-                                <div class="service-tags-pillbox">
-                                    <span class="service-pill">Flutter</span>
-                                    <span class="service-pill">Dart</span>
-                                    <span class="service-pill">Android SDK</span>
-                                    <span class="service-pill">Firebase</span>
-                                    <span class="service-pill">Riverpod</span>
-                                </div>
-                            </div>
+                    <div class="bento-card service-bento-card reveal">
+                        <div class="service-icon-wrap"><i class="ph ph-device-mobile"></i></div>
+                        <h3 class="service-title">Mobile Application Engineering</h3>
+                        <p class="service-desc">
+                            Building fluid cross-platform native iOS &amp; Android applications focusing on 60fps animations, local offline database caching, state synchronisation, and device APIs.
+                        </p>
+                        <div class="service-pills">
+                            <span class="service-pill-item">Flutter</span>
+                            <span class="service-pill-item">Dart</span>
+                            <span class="service-pill-item">Android Studio</span>
+                            <span class="service-pill-item">Firebase</span>
+                            <span class="service-pill-item">Riverpod</span>
                         </div>
                     </div>
 
                     <!-- Service 3 -->
-                    <div class="service-accordion-item" data-index="2">
-                        <button class="service-item-header" type="button">
-                            <span class="service-item-title">DATABASE ARCHITECTURE &amp; CLOUD SYSTEMS</span>
-                            <i class="ph ph-plus service-toggle-icon"></i>
-                        </button>
-                        <div class="service-item-body">
-                            <div class="service-body-content">
-                                <p class="service-desc-text">
-                                    Designing schema-optimized relational and document data models, serverless edge integrations, query indexing pipelines, and automated cloud deployments.
-                                </p>
-                                <div class="service-tags-pillbox">
-                                    <span class="service-pill">PostgreSQL</span>
-                                    <span class="service-pill">Neon DB</span>
-                                    <span class="service-pill">MySQL</span>
-                                    <span class="service-pill">MongoDB</span>
-                                    <span class="service-pill">Docker</span>
-                                    <span class="service-pill">Vercel</span>
-                                </div>
-                            </div>
+                    <div class="bento-card service-bento-card reveal">
+                        <div class="service-icon-wrap"><i class="ph ph-database"></i></div>
+                        <h3 class="service-title">Database Architecture &amp; Cloud</h3>
+                        <p class="service-desc">
+                            Designing schema-optimized relational and document models, query indexing pipelines, automated Docker containers, and serverless edge databases.
+                        </p>
+                        <div class="service-pills">
+                            <span class="service-pill-item">PostgreSQL</span>
+                            <span class="service-pill-item">Neon DB</span>
+                            <span class="service-pill-item">MySQL</span>
+                            <span class="service-pill-item">MongoDB</span>
+                            <span class="service-pill-item">Docker</span>
+                            <span class="service-pill-item">Vercel</span>
                         </div>
                     </div>
 
                     <!-- Service 4 -->
-                    <div class="service-accordion-item" data-index="3">
-                        <button class="service-item-header" type="button">
-                            <span class="service-item-title">UI/UX ARCHITECTURE &amp; CREATIVE DIRECTION</span>
-                            <i class="ph ph-plus service-toggle-icon"></i>
-                        </button>
-                        <div class="service-item-body">
-                            <div class="service-body-content">
-                                <p class="service-desc-text">
-                                    Leading visual brand identity, modern typography-focused design systems, micro-interactions, responsive prototypes, and human-centered design standards.
-                                </p>
-                                <div class="service-tags-pillbox">
-                                    <span class="service-pill">Figma</span>
-                                    <span class="service-pill">Design Systems</span>
-                                    <span class="service-pill">Motion UI</span>
-                                    <span class="service-pill">Responsive Web</span>
-                                    <span class="service-pill">Brand Direction</span>
-                                </div>
-                            </div>
+                    <div class="bento-card service-bento-card reveal">
+                        <div class="service-icon-wrap"><i class="ph ph-paint-brush"></i></div>
+                        <h3 class="service-title">UI/UX Architecture &amp; Creative Direction</h3>
+                        <p class="service-desc">
+                            Directing brand aesthetics, component design systems, micro-interactions, responsive prototypes, and accessible user experiences for modern products.
+                        </p>
+                        <div class="service-pills">
+                            <span class="service-pill-item">Figma</span>
+                            <span class="service-pill-item">Design Systems</span>
+                            <span class="service-pill-item">Motion UI</span>
+                            <span class="service-pill-item">Responsive Web</span>
+                            <span class="service-pill-item">Brand Identity</span>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Experience Section (Dribbble Frame 00:11 - 00:14 Dark Container) -->
+        <!-- Experience Roadmap Bento Grid -->
         <section id="experience" class="section">
             <div class="container">
-                <div class="experience-dark-container reveal">
-                    <div class="watermark-text" aria-hidden="true">EXPERIENCE</div>
-                    <h2 class="section-label-title">
-                        <span><span class="slash">/</span>EXPERIENCE</span>
-                        <span class="section-right-meta">(4+ Years)</span>
-                    </h2>
+                <div class="section-header reveal">
+                    <span class="section-badge"><i class="ph ph-briefcase"></i> CAREER PATH</span>
+                    <h2 class="section-title">Experience &amp; Leadership</h2>
+                    <p class="section-subtitle">Leadership initiatives, technical administration, and software development history.</p>
+                </div>
 
-                    <div class="experience-rows-list">
-                        <!-- Role 1 -->
-                        <div class="experience-row-item">
-                            <div>
-                                <div class="exp-org-name">EWU Computer Programming Club</div>
-                                <div class="exp-role-name">Creative Secretary &bull; Executive Board</div>
-                            </div>
-                            <div class="exp-date-right">Oct 2025 &ndash; Present</div>
+                <div class="experience-bento-grid reveal">
+                    <!-- Role 1 -->
+                    <div class="bento-card exp-bento-row">
+                        <div class="exp-org-badge">
+                            <div class="exp-org-name">EWU Computer Programming Club</div>
+                            <div class="exp-org-place">East West University</div>
                         </div>
+                        <div>
+                            <div class="exp-role-title">Creative Secretary &bull; Executive Board</div>
+                            <p class="exp-role-desc">Directing creative direction, digital branding, and technical media production for inter-university programming contests, hackathons, and developer bootcamps.</p>
+                        </div>
+                        <div class="exp-timeline-date">Oct 2025 &ndash; Present</div>
+                    </div>
 
-                        <!-- Role 2 -->
-                        <div class="experience-row-item">
-                            <div>
-                                <div class="exp-org-name">Utsho Academic &amp; Exam Care</div>
-                                <div class="exp-role-name">E-Learning &amp; Tech Coordinator</div>
-                            </div>
-                            <div class="exp-date-right">Oct 2025 &ndash; Present</div>
+                    <!-- Role 2 -->
+                    <div class="bento-card exp-bento-row">
+                        <div class="exp-org-badge">
+                            <div class="exp-org-name">Utsho Academic &amp; Exam Care</div>
+                            <div class="exp-org-place">Dhaka, Bangladesh</div>
                         </div>
+                        <div>
+                            <div class="exp-role-title">E-Learning &amp; Tech Coordinator</div>
+                            <p class="exp-role-desc">Managing hosting architecture, student mobile apps, and digital examination infrastructure for institutional learning systems.</p>
+                        </div>
+                        <div class="exp-timeline-date">Oct 2025 &ndash; Present</div>
+                    </div>
 
-                        <!-- Role 3 -->
-                        <div class="experience-row-item">
-                            <div>
-                                <div class="exp-org-name">EWU Computer Programming Club</div>
-                                <div class="exp-role-name">Sub-Executive &bull; Workshop Mentor</div>
-                            </div>
-                            <div class="exp-date-right">May 2024 &ndash; Oct 2025</div>
+                    <!-- Role 3 -->
+                    <div class="bento-card exp-bento-row">
+                        <div class="exp-org-badge">
+                            <div class="exp-org-name">EWU Computer Programming Club</div>
+                            <div class="exp-org-place">East West University</div>
                         </div>
+                        <div>
+                            <div class="exp-role-title">Sub-Executive &bull; Workshop Mentor</div>
+                            <p class="exp-role-desc">Organized technical logistics, coordinated competitive programming workshops, and mentored junior students in data structures and software engineering.</p>
+                        </div>
+                        <div class="exp-timeline-date">May 2024 &ndash; Oct 2025</div>
+                    </div>
 
-                        <!-- Role 4 -->
-                        <div class="experience-row-item">
-                            <div>
-                                <div class="exp-org-name">East West University</div>
-                                <div class="exp-role-name">B.Sc. in Software Engineering &bull; Senior Undergrad</div>
-                            </div>
-                            <div class="exp-date-right">2021 &ndash; Present</div>
+                    <!-- Role 4 -->
+                    <div class="bento-card exp-bento-row">
+                        <div class="exp-org-badge">
+                            <div class="exp-org-name">East West University</div>
+                            <div class="exp-org-place">Dhaka, Bangladesh</div>
                         </div>
+                        <div>
+                            <div class="exp-role-title">B.Sc. in Software Engineering &bull; Senior Undergrad</div>
+                            <p class="exp-role-desc">Advanced coursework in Distributed Systems, Artificial Intelligence, Database Management, and Software Architecture.</p>
+                        </div>
+                        <div class="exp-timeline-date">2021 &ndash; Present</div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- CTA Section (Dribbble Frame 00:15 - 00:16) -->
-        <section id="contact" class="cta-banner-section">
+        <!-- Contact Bento Section -->
+        <section id="contact" class="section">
             <div class="container">
-                <div class="cta-banner-content reveal">
-                    <div class="nav-status-pill" style="margin-bottom: 1.5rem;">
-                        <span class="status-dot"></span>
-                        <span>Available for New Opportunities</span>
-                    </div>
-
-                    <h2 class="cta-main-title">HAVE A PROJECT<br>IN MIND?</h2>
-                    <p class="cta-main-desc">
-                        Let's build something exceptional together. Whether you are looking for an ambitious software engineer, an end-to-end platform, or modern UI architecture.
-                    </p>
-
-                    <button id="contact-toggle-btn" class="btn-contact-huge" type="button">
-                        Contact Me ↗
-                    </button>
+                <div class="section-header reveal">
+                    <span class="section-badge"><i class="ph ph-chat-circle"></i> GET IN TOUCH</span>
+                    <h2 class="section-title">Let's Build Something Exceptional</h2>
+                    <p class="section-subtitle">Whether you're looking for an ambitious software engineer, have a technical project to discuss, or want to collaborate—feel free to reach out directly.</p>
                 </div>
 
-                <!-- Interactive Contact Drawer -->
-                <div id="contact-drawer" class="contact-drawer">
-                    <div class="contact-box-card">
-                        <div class="contact-channels-row">
-                            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=mwtsfn@gmail.com" target="_blank" class="channel-pill">
-                                <span class="label">Direct Email</span>
-                                <span class="val">mwtsfn@gmail.com</span>
-                            </a>
-
-                            <a href="https://wa.me/8801731955291" target="_blank" class="channel-pill">
-                                <span class="label">WhatsApp</span>
-                                <span class="val">+880 1731 955291</span>
-                            </a>
-
-                            <div class="channel-pill">
-                                <span class="label">Location</span>
-                                <span class="val">Dhaka, Bangladesh</span>
+                <div class="contact-bento-grid">
+                    <!-- Quick Channels Bento Column -->
+                    <div class="contact-quick-col reveal">
+                        <!-- Email Card with 1-Click Copy -->
+                        <div class="bento-card contact-info-card" id="copy-email-card" data-email="mwtsfn@gmail.com">
+                            <div class="contact-info-icon"><i class="ph-fill ph-envelope-simple"></i></div>
+                            <div class="contact-info-details">
+                                <span class="contact-info-label">Direct Email</span>
+                                <span class="contact-info-val">mwtsfn@gmail.com</span>
                             </div>
+                            <span class="copy-status-badge" id="copy-status-badge">Copy</span>
                         </div>
 
-                        <form action="https://formspree.io/f/xvznezrw" method="POST" class="contact-form">
+                        <!-- WhatsApp Card -->
+                        <a href="https://wa.me/8801731955291" target="_blank" class="bento-card contact-info-card">
+                            <div class="contact-info-icon" style="color: #25D366; background: rgba(37, 211, 102, 0.1); border-color: rgba(37, 211, 102, 0.25);">
+                                <i class="ph-fill ph-whatsapp-logo"></i>
+                            </div>
+                            <div class="contact-info-details">
+                                <span class="contact-info-label">WhatsApp Chat</span>
+                                <span class="contact-info-val">+880 1731 955291</span>
+                            </div>
+                            <i class="ph ph-arrow-up-right" style="margin-left: auto; color: var(--text-muted);"></i>
+                        </a>
+
+                        <!-- Location Card with Live Clock -->
+                        <div class="bento-card contact-info-card">
+                            <div class="contact-info-icon"><i class="ph-fill ph-map-pin"></i></div>
+                            <div class="contact-info-details">
+                                <span class="contact-info-label">Location &amp; Local Time</span>
+                                <span class="contact-info-val">Dhaka, Bangladesh</span>
+                            </div>
+                            <span class="copy-status-badge" id="contact-clock-badge">GMT+6</span>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form Card -->
+                    <div class="bento-card contact-form-card reveal">
+                        <h3 class="contact-form-title">Send a Direct Message</h3>
+                        <p class="contact-form-subtitle">Fill in the form below and I'll get back to you within 24 hours.</p>
+
+                        <form action="https://formspree.io/f/xvznezrw" method="POST" class="contact-form" id="contact-form">
                             <div class="form-row">
                                 <div class="form-group">
                                     <label for="name">Your Name</label>
@@ -466,10 +589,11 @@
                             </div>
                             <div class="form-group">
                                 <label for="message">Message</label>
-                                <textarea id="message" name="message" rows="4" placeholder="Tell me about your idea, requirements, or timeline..." required></textarea>
+                                <textarea id="message" name="message" rows="4" placeholder="Tell me about your project, timeline, or requirements..." required></textarea>
                             </div>
-                            <button type="submit" class="btn-send-message">
-                                <span>Send Message ↗</span>
+                            <button type="submit" class="btn-form-submit">
+                                <span>Send Message</span>
+                                <i class="ph ph-paper-plane-tilt"></i>
                             </button>
                         </form>
                     </div>
@@ -483,13 +607,13 @@
         <div class="container">
             <div class="footer-inner">
                 <div>
-                    &copy; <span id="current-year"></span> Miftahul Islam Tashfin. All rights reserved.
+                    &copy; <span id="current-year"></span> Miftahul Islam Tashfin. Crafted with precision &amp; elegance.
                 </div>
-                <div class="footer-nav-links">
-                    <a href="#hero">Top</a>
-                    <a href="#work">Work</a>
-                    <a href="#service">Service</a>
-                    <a href="#experience">Experience</a>
+                <div class="footer-links">
+                    <a href="#about">About</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#services">Services</a>
+                    <a href="#experience">Roadmap</a>
                     <a href="assets/Miftahul_Islam_Tashfin_Resume.pdf" target="_blank">Resume ↗</a>
                     <a href="https://github.com/tashfinn" target="_blank">GitHub</a>
                     <a href="https://www.linkedin.com/in/tashfinn/" target="_blank">LinkedIn</a>
