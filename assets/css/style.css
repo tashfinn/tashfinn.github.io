@@ -397,24 +397,25 @@ ul { list-style: none; }
 
 .hero-main-title {
     font-family: var(--font-heading);
-    font-size: clamp(2.4rem, 4.5vw, 3.8rem);
-    font-weight: 800;
-    line-height: 1.08;
-    letter-spacing: -0.04em;
+    font-size: clamp(2.85rem, 5.8vw, 4.65rem);
+    font-weight: 900;
+    line-height: 1.04;
+    letter-spacing: -0.035em;
     color: var(--text-primary);
     margin-bottom: 1.5rem;
 }
 
 .hero-main-title .gradient-text {
-    background: var(--text-gradient);
+    background: linear-gradient(135deg, #ffffff 20%, #cbd5e1 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 .hero-main-title .emerald-text {
-    background: var(--accent-gradient);
+    background: linear-gradient(135deg, #10b981 0%, #06b6d4 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 30px rgba(16, 185, 129, 0.35));
 }
 
 .hero-main-desc {
