@@ -4,21 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Miftahul Islam Tashfin — Software Engineer</title>
-    <meta name="description" content="Portfolio of Miftahul Islam Tashfin, Software Engineering undergraduate specializing in Full-Stack Web Development, Mobile Apps, and System Design.">
+    <meta name="description" content="Personal portfolio of Miftahul Islam Tashfin, Software Engineering undergraduate specializing in Full-Stack Web Development, Mobile Apps, and System Architecture.">
     
     <!-- Open Graph -->
     <meta property="og:title" content="Miftahul Islam Tashfin — Software Engineer">
-    <meta property="og:description" content="Software Engineering undergraduate building modern, scalable, and intuitive web and mobile experiences.">
+    <meta property="og:description" content="Creative Software Engineer building high-performance, scalable, and responsive web solutions.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://tashfinn.github.io/">
 
     <!-- Favicon -->
     <link rel="icon" href="assets/TashfinProfileCropped.jpg" type="image/jpeg">
 
-    <!-- Google Fonts: Archivo (Majd Theme) -->
+    <!-- Google Fonts: Anton & Roboto Flex (Tajmirul Theme) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto+Flex:wght@100..1000&display=swap" rel="stylesheet">
     
     <!-- Phosphor Icons -->
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
@@ -28,17 +28,16 @@
 </head>
 <body>
 
-    <!-- Floating Pill Navigation (Majd Style) -->
+    <!-- Floating Navbar (Tajmirul Style) -->
     <header class="navbar">
         <nav class="nav-content">
             <a href="#" class="logo">Tashfin<span>.</span></a>
             <div class="nav-actions">
                 <ul class="nav-links" id="nav-links">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Expertise</a></li>
-                    <li><a href="#experience">Roadmap</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#projects">Work</a></li>
+                    <li><a href="#about-me">About Me</a></li>
+                    <li><a href="#my-stack">Stack</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#projects">Projects</a></li>
                     <li><a href="#contact">Contact</a></li>
                     <li><a href="assets/Miftahul_Islam_Tashfin_Resume.pdf" target="_blank" class="btn-cv"><i class="ph ph-file-pdf"></i> View CV</a></li>
                 </ul>
@@ -50,28 +49,47 @@
     </header>
 
     <main>
-        <!-- Hero Section -->
-        <section id="hero" class="hero section">
+        <!-- Banner / Hero Section (Tajmirul Style) -->
+        <section id="banner" class="hero section">
             <div class="container">
                 <div class="hero-grid">
                     <div class="hero-info reveal">
                         <div class="status-pill">
                             <span class="status-dot"></span>
-                            <span>Available for Opportunities</span>
+                            <span>Available for full-time opportunities</span>
                         </div>
-                        <div class="eyebrow-tag">/ SOFTWARE ENGINEER & CREATIVE DEVELOPER</div>
-                        <h1 class="hero-huge-title">SOFTWARE<br>ENGINEER</h1>
+                        <div class="eyebrow-tag"><span class="slash">//</span> SOFTWARE & FULL-STACK ENGINEER</div>
+                        <h1 class="hero-banner-title">
+                            <span class="accent">SOFTWARE</span><br>
+                            <span class="title-indent">ENGINEER</span>
+                        </h1>
                         <p class="hero-bio">
-                            I'm <strong>Miftahul Islam Tashfin</strong>, a 4th-year Software Engineering Undergraduate at East West University & Creative Secretary at EWU Computer Programming Club. I engineer modern, scalable full-stack web and mobile systems with a sharp eye for interface precision.
+                            Hi! I'm <strong>Tashfin</strong>. A creative Software Engineer with 4 years of rigorous undergraduate engineering experience at East West University & Creative Secretary at EWU Computer Programming Club, focused on building high-performance, scalable, and responsive web solutions.
                         </p>
                         <div class="hero-actions">
-                            <a href="#contact" class="btn-primary">Let's Connect <i class="ph ph-arrow-right"></i></a>
+                            <a href="#contact" class="btn-primary">Let's Talk <i class="ph ph-arrow-right"></i></a>
                             <a href="#projects" class="btn-secondary">Explore Work</a>
                             <div class="hero-socials">
                                 <a href="https://github.com/tashfinn" target="_blank" class="social-icon-btn" aria-label="GitHub"><i class="ph ph-github-logo"></i></a>
                                 <a href="https://www.linkedin.com/in/tashfinn/" target="_blank" class="social-icon-btn" aria-label="LinkedIn"><i class="ph ph-linkedin-logo"></i></a>
                                 <a href="https://www.facebook.com/FinnX5/" target="_blank" class="social-icon-btn" aria-label="Facebook"><i class="ph ph-facebook-logo"></i></a>
                                 <a href="https://www.instagram.com/m_tashfin/" target="_blank" class="social-icon-btn" aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
+                            </div>
+                        </div>
+
+                        <!-- Hero Quick Stats Row -->
+                        <div class="hero-stat-row">
+                            <div class="hero-stat-item">
+                                <div class="hero-stat-value">4th</div>
+                                <div class="hero-stat-label">Year Undergrad</div>
+                            </div>
+                            <div class="hero-stat-item">
+                                <div class="hero-stat-value">20+</div>
+                                <div class="hero-stat-label">Projects Built</div>
+                            </div>
+                            <div class="hero-stat-item">
+                                <div class="hero-stat-value">2+</div>
+                                <div class="hero-stat-label">Club Roles</div>
                             </div>
                         </div>
                     </div>
@@ -85,129 +103,153 @@
             </div>
         </section>
 
-        <!-- Services / Core Pillars Section (Majd Style) -->
-        <section id="services" class="section">
+        <!-- About Me Section (Tajmirul Style) -->
+        <section id="about-me" class="section">
             <div class="container">
-                <div class="text-center reveal">
-                    <div class="eyebrow-tag">/ WHAT I BRING TO THE TABLE</div>
-                    <h2 class="section-title">Core Disciplines</h2>
-                    <p class="section-subtitle">Bridging backend architectural rigor with modern, responsive frontends and intuitive user interfaces.</p>
+                <div class="quote-banner reveal">
+                    "I believe in a user-centered design and engineering approach, ensuring that every project I work on is tailored to meet the specific needs of its users."
                 </div>
-                
-                <div class="services-grid">
-                    <div class="service-card reveal">
-                        <div class="service-header">
-                            <div class="service-index">01 / ARCHITECTURE</div>
-                            <h3>Full-Stack Engineering</h3>
-                            <p>Designing performant, scalable web applications from modular server endpoints to clean component-driven client interfaces.</p>
+
+                <div class="about-columns reveal">
+                    <div>
+                        <div class="eyebrow-tag"><span class="slash">//</span> THIS IS ME</div>
+                        <h2 class="about-highlight-title">Hi, I'm Tashfin.</h2>
+                    </div>
+                    <div class="about-text">
+                        <p>
+                            I'm a software engineer and full-stack developer dedicated to turning ideas into reliable, scalable solutions. I specialize in crafting seamless, intuitive user experiences while architecting clean backend systems that perform under load.
+                        </p>
+                        <p>
+                            My approach focuses on creating scalable, high-performing solutions tailored to both technical rigor and user objectives. By prioritizing performance, accessibility, and responsive architecture, I strive to deliver digital systems that not only engage users but also drive tangible outcomes.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- My Stack Section (Tajmirul Style) -->
+        <section id="my-stack" class="section">
+            <div class="container">
+                <div class="stack-section-header reveal">
+                    <svg class="spinning-flower" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 2v4m0 12v4M2 12h4m12 0h4m-3.07-7.07l-2.83 2.83m-8.48 8.48l-2.83 2.83m0-14.14l2.83 2.83m8.48 8.48l2.83 2.83" />
+                    </svg>
+                    <h2 class="section-title">My Stack</h2>
+                </div>
+
+                <!-- Frontend Group -->
+                <div class="stack-group reveal">
+                    <div class="stack-group-title">Frontend</div>
+                    <div class="stack-items-wrap">
+                        <div class="stack-item">
+                            <i class="ph-fill ph-file-js"></i>
+                            <span>JavaScript</span>
                         </div>
-                        <div class="pill-tags">
-                            <span class="pill-tag">React</span>
-                            <span class="pill-tag">Next.js</span>
-                            <span class="pill-tag">Node.js</span>
-                            <span class="pill-tag">TypeScript</span>
-                            <span class="pill-tag">PHP</span>
-                            <span class="pill-tag">REST APIs</span>
+                        <div class="stack-item">
+                            <i class="ph-fill ph-file-ts"></i>
+                            <span>TypeScript</span>
+                        </div>
+                        <div class="stack-item">
+                            <i class="ph-fill ph-atom"></i>
+                            <span>React</span>
+                        </div>
+                        <div class="stack-item">
+                            <i class="ph-bold ph-triangle"></i>
+                            <span>Next.js</span>
+                        </div>
+                        <div class="stack-item">
+                            <i class="ph-fill ph-wind"></i>
+                            <span>Tailwind CSS</span>
+                        </div>
+                        <div class="stack-item">
+                            <i class="ph-fill ph-file-html"></i>
+                            <span>HTML5 / CSS3</span>
                         </div>
                     </div>
+                </div>
 
-                    <div class="service-card reveal">
-                        <div class="service-header">
-                            <div class="service-index">02 / PLATFORMS</div>
-                            <h3>Mobile Application Dev</h3>
-                            <p>Building cross-platform mobile solutions featuring clean state management, smooth transitions, and offline-ready local persistence.</p>
+                <!-- Backend & Data Group -->
+                <div class="stack-group reveal">
+                    <div class="stack-group-title">Backend</div>
+                    <div class="stack-items-wrap">
+                        <div class="stack-item">
+                            <i class="ph-fill ph-hexagon"></i>
+                            <span>Node.js</span>
                         </div>
-                        <div class="pill-tags">
-                            <span class="pill-tag">Flutter</span>
-                            <span class="pill-tag">Android Studio</span>
-                            <span class="pill-tag">Java</span>
-                            <span class="pill-tag">Cross-Platform UI</span>
+                        <div class="stack-item">
+                            <i class="ph-fill ph-plug"></i>
+                            <span>Express.js</span>
+                        </div>
+                        <div class="stack-item">
+                            <i class="ph-fill ph-file-py"></i>
+                            <span>Python</span>
+                        </div>
+                        <div class="stack-item">
+                            <i class="ph-fill ph-coffee"></i>
+                            <span>Java</span>
+                        </div>
+                        <div class="stack-item">
+                            <i class="ph-fill ph-file-code"></i>
+                            <span>PHP</span>
+                        </div>
+                        <div class="stack-item">
+                            <i class="ph-fill ph-database"></i>
+                            <span>PostgreSQL</span>
+                        </div>
+                        <div class="stack-item">
+                            <i class="ph-fill ph-database"></i>
+                            <span>MySQL</span>
+                        </div>
+                        <div class="stack-item">
+                            <i class="ph-fill ph-cloud"></i>
+                            <span>Neon DB</span>
                         </div>
                     </div>
+                </div>
 
-                    <div class="service-card reveal">
-                        <div class="service-header">
-                            <div class="service-index">03 / DATA SYSTEMS</div>
-                            <h3>Database & Backend Infrastructure</h3>
-                            <p>Structuring relational databases, optimizing query performance, and implementing secure authentication pipelines.</p>
+                <!-- Mobile & Tools Group -->
+                <div class="stack-group reveal">
+                    <div class="stack-group-title">Mobile & Tools</div>
+                    <div class="stack-items-wrap">
+                        <div class="stack-item">
+                            <i class="ph-fill ph-device-mobile"></i>
+                            <span>Flutter</span>
                         </div>
-                        <div class="pill-tags">
-                            <span class="pill-tag">PostgreSQL</span>
-                            <span class="pill-tag">MySQL</span>
-                            <span class="pill-tag">Neon Serverless</span>
-                            <span class="pill-tag">Prisma / ORM</span>
+                        <div class="stack-item">
+                            <i class="ph-fill ph-android-logo"></i>
+                            <span>Android Studio</span>
                         </div>
-                    </div>
-
-                    <div class="service-card reveal">
-                        <div class="service-header">
-                            <div class="service-index">04 / CREATIVE LEADERSHIP</div>
-                            <h3>UI/UX & Creative Direction</h3>
-                            <p>Directing digital visual identity, branding guidelines, and user journey workflows as Creative Secretary at EWUCPC.</p>
+                        <div class="stack-item">
+                            <i class="ph-fill ph-git-branch"></i>
+                            <span>Git & GitHub</span>
                         </div>
-                        <div class="pill-tags">
-                            <span class="pill-tag">Figma</span>
-                            <span class="pill-tag">Design Systems</span>
-                            <span class="pill-tag">Brand Direction</span>
-                            <span class="pill-tag">Prototyping</span>
+                        <div class="stack-item">
+                            <i class="ph-fill ph-figma-logo"></i>
+                            <span>Figma UI/UX</span>
+                        </div>
+                        <div class="stack-item">
+                            <i class="ph-fill ph-linux-logo"></i>
+                            <span>Linux CLI</span>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- About Section -->
-        <section id="about" class="section">
-            <div class="container">
-                <div class="about-box reveal">
-                    <div class="about-columns">
-                        <div class="about-text">
-                            <div class="eyebrow-tag">/ BACKGROUND & PROFILE</div>
-                            <h3>A builder driven by engineering curiosity.</h3>
-                            <p>
-                                I am currently completing my 4th year in <strong>Software Engineering</strong> at East West University, Dhaka. Over the past four years, I've transformed curiosity into a disciplined craft—shipping production-grade software, competing in hackathons, and guiding student communities.
-                            </p>
-                            <p>
-                                Beyond software engineering, I orchestrate creative initiatives and design systems for national programming festivals. I care deeply about clean code, high usability, and fast execution.
-                            </p>
-                        </div>
-                        <div class="about-stats">
-                            <div class="stat-card">
-                                <span class="stat-number">4th</span>
-                                <span class="stat-label">Year Undergrad</span>
-                            </div>
-                            <div class="stat-card">
-                                <span class="stat-number">20+</span>
-                                <span class="stat-label">Projects Shipped</span>
-                            </div>
-                            <div class="stat-card">
-                                <span class="stat-number">2+</span>
-                                <span class="stat-label">Leadership Roles</span>
-                            </div>
-                            <div class="stat-card">
-                                <span class="stat-number">100%</span>
-                                <span class="stat-label">Dedicated Craft</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Experience Roadmap -->
+        <!-- Experience Section (Tajmirul Style) -->
         <section id="experience" class="section">
             <div class="container">
                 <div class="text-center reveal">
-                    <div class="eyebrow-tag">/ CAREER & LEADERSHIP</div>
-                    <h2 class="section-title">Experience Roadmap</h2>
-                    <p class="section-subtitle">Leadership responsibilities, technical coordination, and collaborative roles.</p>
+                    <div class="eyebrow-tag"><span class="slash">//</span> CHRONOLOGY</div>
+                    <h2 class="section-title">Experience & Leadership</h2>
+                    <p class="section-subtitle">Leadership responsibilities, technical coordination, and academic development.</p>
                 </div>
 
                 <div class="timeline-list">
                     <div class="timeline-card reveal">
                         <div class="timeline-meta">
                             <span class="timeline-date-pill">Oct 2025 &ndash; Present</span>
-                            <span class="timeline-org">EWU Computer Programming Club</span>
+                            <div class="timeline-org">EWU Computer Programming Club</div>
                         </div>
                         <div class="timeline-content">
                             <h3>Creative Secretary</h3>
@@ -218,7 +260,7 @@
                     <div class="timeline-card reveal">
                         <div class="timeline-meta">
                             <span class="timeline-date-pill">Oct 2025 &ndash; Present</span>
-                            <span class="timeline-org">Utsho Academic & Exam Care</span>
+                            <div class="timeline-org">Utsho Academic & Exam Care</div>
                         </div>
                         <div class="timeline-content">
                             <h3>E-Learning & Tech Coordinator</h3>
@@ -229,7 +271,7 @@
                     <div class="timeline-card reveal">
                         <div class="timeline-meta">
                             <span class="timeline-date-pill">May 2024 &ndash; Oct 2025</span>
-                            <span class="timeline-org">EWU Computer Programming Club</span>
+                            <div class="timeline-org">EWU Computer Programming Club</div>
                         </div>
                         <div class="timeline-content">
                             <h3>Sub-Executive</h3>
@@ -240,108 +282,13 @@
             </div>
         </section>
 
-        <!-- Skills Section -->
-        <section id="skills" class="section">
-            <div class="container">
-                <div class="text-center reveal">
-                    <div class="eyebrow-tag">/ TECHNICAL TOOLKIT</div>
-                    <h2 class="section-title">Skills & Technologies</h2>
-                    <p class="section-subtitle">A curated view of languages, frameworks, databases, and engineering tools I leverage regularly.</p>
-                </div>
-
-                <div class="skills-masonry">
-                    <div class="skill-box reveal">
-                        <div class="skill-box-header">
-                            <i class="ph ph-code"></i>
-                            <h3>Programming Languages</h3>
-                        </div>
-                        <div class="skill-pill-list">
-                            <span class="skill-pill"><i class="ph-fill ph-file-c"></i> C / C++</span>
-                            <span class="skill-pill"><i class="ph-fill ph-coffee"></i> Java</span>
-                            <span class="skill-pill"><i class="ph-fill ph-file-py"></i> Python</span>
-                            <span class="skill-pill"><i class="ph-fill ph-file-js"></i> JavaScript</span>
-                            <span class="skill-pill"><i class="ph-fill ph-file-ts"></i> TypeScript</span>
-                            <span class="skill-pill"><i class="ph-fill ph-file-code"></i> PHP</span>
-                        </div>
-                    </div>
-
-                    <div class="skill-box reveal">
-                        <div class="skill-box-header">
-                            <i class="ph ph-globe"></i>
-                            <h3>Web & Frameworks</h3>
-                        </div>
-                        <div class="skill-pill-list">
-                            <span class="skill-pill"><i class="ph-fill ph-atom"></i> React</span>
-                            <span class="skill-pill"><i class="ph-bold ph-triangle"></i> Next.js</span>
-                            <span class="skill-pill"><i class="ph-fill ph-hexagon"></i> Node.js</span>
-                            <span class="skill-pill"><i class="ph-fill ph-wind"></i> Tailwind CSS</span>
-                            <span class="skill-pill"><i class="ph-fill ph-file-html"></i> HTML5 / CSS3</span>
-                            <span class="skill-pill"><i class="ph-fill ph-plug"></i> Express.js</span>
-                        </div>
-                    </div>
-
-                    <div class="skill-box reveal">
-                        <div class="skill-box-header">
-                            <i class="ph ph-database"></i>
-                            <h3>Databases & Cloud</h3>
-                        </div>
-                        <div class="skill-pill-list">
-                            <span class="skill-pill"><i class="ph-fill ph-database"></i> PostgreSQL</span>
-                            <span class="skill-pill"><i class="ph-fill ph-database"></i> MySQL</span>
-                            <span class="skill-pill"><i class="ph-fill ph-cloud"></i> Neon DB</span>
-                            <span class="skill-pill"><i class="ph-fill ph-triangle"></i> Vercel</span>
-                            <span class="skill-pill"><i class="ph-fill ph-fire"></i> Firebase</span>
-                        </div>
-                    </div>
-
-                    <div class="skill-box reveal">
-                        <div class="skill-box-header">
-                            <i class="ph ph-device-mobile"></i>
-                            <h3>Mobile App Development</h3>
-                        </div>
-                        <div class="skill-pill-list">
-                            <span class="skill-pill"><i class="ph-fill ph-device-mobile"></i> Flutter</span>
-                            <span class="skill-pill"><i class="ph-fill ph-android-logo"></i> Android Studio</span>
-                            <span class="skill-pill"><i class="ph-fill ph-app-window"></i> Cross-Platform</span>
-                        </div>
-                    </div>
-
-                    <div class="skill-box reveal">
-                        <div class="skill-box-header">
-                            <i class="ph ph-paint-brush"></i>
-                            <h3>UI/UX & Creative Tools</h3>
-                        </div>
-                        <div class="skill-pill-list">
-                            <span class="skill-pill"><i class="ph-fill ph-figma-logo"></i> Figma</span>
-                            <span class="skill-pill"><i class="ph-fill ph-palette"></i> Design Systems</span>
-                            <span class="skill-pill"><i class="ph-fill ph-eye"></i> Visual Hierarchy</span>
-                            <span class="skill-pill"><i class="ph-fill ph-sparkle"></i> Wireframing</span>
-                        </div>
-                    </div>
-
-                    <div class="skill-box reveal">
-                        <div class="skill-box-header">
-                            <i class="ph ph-wrench"></i>
-                            <h3>Workflow & DevOps</h3>
-                        </div>
-                        <div class="skill-pill-list">
-                            <span class="skill-pill"><i class="ph-fill ph-git-branch"></i> Git</span>
-                            <span class="skill-pill"><i class="ph-fill ph-github-logo"></i> GitHub</span>
-                            <span class="skill-pill"><i class="ph-fill ph-linux-logo"></i> Linux CLI</span>
-                            <span class="skill-pill"><i class="ph-fill ph-terminal"></i> PowerShell</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Featured Projects Section (Majd Framer Style) -->
+        <!-- Projects Section (Tajmirul Style) -->
         <section id="projects" class="section">
             <div class="container">
                 <div class="text-center reveal">
-                    <div class="eyebrow-tag">/ SELECTED CREATIONS</div>
+                    <div class="eyebrow-tag"><span class="slash">//</span> SELECTED WORKS</div>
                     <h2 class="section-title">Featured Projects</h2>
-                    <p class="section-subtitle">A showcase of full-stack applications, distributed games, and academic engineering solutions.</p>
+                    <p class="section-subtitle">A showcase of full-stack applications, ML-powered extensions, and distributed multiplayer systems.</p>
                 </div>
 
                 <div class="projects-grid">
@@ -350,7 +297,7 @@
                         <div class="project-card-banner">
                             <div class="project-banner-placeholder">
                                 <i class="ph ph-shield-check"></i>
-                                <span>Capston / ML & AdBlock</span>
+                                <span>Capstone Engine / ML & AdBlock</span>
                             </div>
                         </div>
                         <div class="project-card-body">
@@ -375,7 +322,7 @@
                         <div class="project-card-banner">
                             <div class="project-banner-placeholder">
                                 <i class="ph ph-users-three"></i>
-                                <span>Platform / Full-Stack</span>
+                                <span>Academic / Full-Stack</span>
                             </div>
                         </div>
                         <div class="project-card-body">
@@ -400,7 +347,7 @@
                         <div class="project-card-banner">
                             <div class="project-banner-placeholder">
                                 <i class="ph ph-brain"></i>
-                                <span>Serverless / Next.js</span>
+                                <span>Serverless / Edge Compute</span>
                             </div>
                         </div>
                         <div class="project-card-body">
@@ -434,7 +381,7 @@
                                     <h3>Lumiere E-Commerce</h3>
                                     <span class="project-arrow"><i class="ph ph-arrow-up-right"></i></span>
                                 </div>
-                                <p>A modern, full-featured online storefront built with robust catalog filtering, cart state management, checkout flows, and responsive luxury aesthetics.</p>
+                                <p>A modern online storefront built with robust catalog filtering, cart state management, checkout flows, and responsive dark aesthetics.</p>
                             </div>
                             <div class="pill-tags">
                                 <span class="pill-tag">React</span>
@@ -450,7 +397,7 @@
                         <div class="project-card-banner">
                             <div class="project-banner-placeholder">
                                 <i class="ph ph-device-mobile"></i>
-                                <span>Mobile / Management</span>
+                                <span>Mobile App / Systems</span>
                             </div>
                         </div>
                         <div class="project-card-body">
@@ -498,15 +445,15 @@
             </div>
         </section>
 
-        <!-- Contact Section -->
+        <!-- Contact Section (Tajmirul Style) -->
         <section id="contact" class="section">
             <div class="container">
                 <div class="contact-grid">
                     <div class="contact-left reveal">
-                        <div class="eyebrow-tag">/ GET IN TOUCH</div>
-                        <h3>Let's talk about building together.</h3>
+                        <div class="eyebrow-tag"><span class="slash">//</span> GET IN TOUCH</div>
+                        <h3>Let's build something exceptional.</h3>
                         <p>
-                            Whether you're looking for a dedicated software engineering hire, seeking a project collaborator, or just want to chat about tech—my inbox is always open.
+                            Looking for a dedicated software engineering hire, an ambitious technical collaborator, or just want to discuss modern systems? Reach out anytime.
                         </p>
 
                         <div class="contact-channels">
@@ -519,7 +466,7 @@
                             </a>
 
                             <a href="https://wa.me/8801731955291" target="_blank" class="channel-card">
-                                <div class="channel-icon" style="color: #10b981;"><i class="ph-fill ph-whatsapp-logo"></i></div>
+                                <div class="channel-icon" style="color: #25D366;"><i class="ph-fill ph-whatsapp-logo"></i></div>
                                 <div class="channel-info">
                                     <span class="label">WhatsApp</span>
                                     <span class="value">+880 1731 955291</span>
@@ -550,7 +497,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="subject">Subject</label>
-                                <input type="text" id="subject" name="subject" placeholder="Project Inquiry / Job Opportunity" required>
+                                <input type="text" id="subject" name="subject" placeholder="Project Inquiry / Role Opportunity" required>
                             </div>
                             <div class="form-group">
                                 <label for="message">Message</label>
@@ -567,15 +514,15 @@
         </section>
     </main>
 
-    <!-- Footer & Giant Brand Watermark (Majd Style) -->
+    <!-- Footer & Giant Brand Watermark (Tajmirul Style) -->
     <footer class="footer-wrap">
         <div class="container">
             <div class="footer-nav">
                 <a href="#" class="logo">Tashfin<span>.</span></a>
                 <div class="footer-nav-links">
-                    <a href="#about">About</a>
-                    <a href="#services">Expertise</a>
-                    <a href="#projects">Work</a>
+                    <a href="#about-me">About</a>
+                    <a href="#my-stack">Stack</a>
+                    <a href="#projects">Projects</a>
                     <a href="assets/Miftahul_Islam_Tashfin_Resume.pdf" target="_blank">View CV</a>
                     <a href="#contact">Contact</a>
                 </div>
@@ -587,14 +534,14 @@
                 </div>
             </div>
 
-            <!-- Signature Majd Massive Typographic Watermark -->
+            <!-- Signature Watermark -->
             <div class="footer-brand-huge" aria-hidden="true">
                 TASHFIN
             </div>
 
             <div class="footer-bottom-bar">
                 <p>&copy; <span id="current-year"></span> Miftahul Islam Tashfin. All rights reserved.</p>
-                <p>Designed with the Majd Framer aesthetic.</p>
+                <p>Designed with the Tajmirul theme.</p>
             </div>
         </div>
     </footer>
