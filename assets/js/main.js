@@ -1,24 +1,21 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", () => {
     // 1. Set current year in footer
-    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById("year").textContent = new Date().getFullYear();
 
     // 2. Sticky Navbar Effect
-    const navbar = document.querySelector('.navbar');
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            navbar.classList.add('scrolled');
-        } else {
-            navbar.classList.remove('scrolled');
-        }
+    const navbar = document.querySelector(".navbar");
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 50) navbar.classList.add("scrolled");
+        else navbar.classList.remove("scrolled");
     });
 
     // 3. Typing Animation
     const typedTextSpan = document.querySelector(".typed-text");
     const textArray = [
-        "Software Engineer", 
+        "Software Engineer",
         "Full-Stack Developer",
         "Mobile App Developer",
-        "Tech Enthusiast", 
+        "Tech Enthusiast",
         "Problem Solver"
     ];
     const typingDelay = 100;
@@ -49,136 +46,82 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Start typing animation after 1s
     if (textArray.length) setTimeout(type, 1000);
 
-    // 4. Scroll Reveal Animations (Intersection Observer)
-    const fadeElements = document.querySelectorAll('.fade-in, .fade-in-up');
-    
-    const appearOptions = {
-        threshold: 0.15,
-        rootMargin: "0px 0px -50px 0px"
-    };
+    // 4. Scroll Reveal Animations
+    const fadeElements = document.querySelectorAll(".fade-in, .fade-in-up");
+    const appearOptions = { threshold: 0.12, rootMargin: "0px 0px -40px 0px" };
 
     const appearOnScroll = new IntersectionObserver(function(entries, observer) {
         entries.forEach(entry => {
-            if (!entry.isIntersecting) {
-                return;
-            } else {
-                entry.target.classList.add('appear');
-                observer.unobserve(entry.target);
-            }
+            if (!entry.isIntersecting) return;
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
         });
     }, appearOptions);
 
-    fadeElements.forEach(el => {
-        appearOnScroll.observe(el);
-    });
+    fadeElements.forEach(el => appearOnScroll.observe(el));
 
     // 5. Smooth Scrolling for Anchor Links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
+    document.querySelectorAll("a[href^=\"#\"]").forEach(anchor => {
+        anchor.addEventListener("click", function(e) {
             e.preventDefault();
-            const targetId = this.getAttribute('href');
-            if (targetId === '#') {
-                window.scrollTo({ top: 0, behavior: 'smooth' });
+            const targetId = this.getAttribute("href");
+            if (targetId === "#") {
+                window.scrollTo({ top: 0, behavior: "smooth" });
                 return;
             }
             const targetElement = document.querySelector(targetId);
             if (targetElement) {
-                const navHeight = document.querySelector('.navbar').offsetHeight;
+                const navHeight = document.querySelector(".navbar").offsetHeight;
                 const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - navHeight;
-                window.scrollTo({
-                    top: targetPosition,
-                    behavior: 'smooth'
-                });
+                window.scrollTo({ top: targetPosition, behavior: "smooth" });
             }
+            // Close mobile menu
+            document.body.classList.remove("mobile-nav-open");
+            const icon = document.querySelector("#mobile-menu-btn i");
+            if (icon) { icon.classList.remove("ph-x"); icon.classList.add("ph-list"); }
         });
     });
 
-    // 6. Theme Toggle Logic
-    const themeToggleBtn = document.getElementById('theme-toggle');
-    const themeIcon = themeToggleBtn.querySelector('i');
-    
-    // Check for saved theme preference
-    const savedTheme = localStorage.getItem('portfolio-theme');
-    if (savedTheme === 'light') {
-        document.body.classList.add('light-mode');
-        themeIcon.classList.replace('ph-sun', 'ph-moon');
-    }
-    
-    themeToggleBtn.addEventListener('click', () => {
-        document.body.classList.toggle('light-mode');
-        const isLightMode = document.body.classList.contains('light-mode');
-        
-        if (isLightMode) {
-            themeIcon.classList.replace('ph-sun', 'ph-moon');
-            localStorage.setItem('portfolio-theme', 'light');
-        } else {
-            themeIcon.classList.replace('ph-moon', 'ph-sun');
-            localStorage.setItem('portfolio-theme', 'dark');
-        }
-    });
-
-    // 7. Mobile Menu Toggle
-    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-    const navLinks = document.querySelector('.nav-links');
-    
-    if (mobileMenuBtn && navLinks) {
-        mobileMenuBtn.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-            const icon = mobileMenuBtn.querySelector('i');
-            if (navLinks.classList.contains('active')) {
-                icon.classList.replace('ph-list', 'ph-x');
-            } else {
-                icon.classList.replace('ph-x', 'ph-list');
-            }
-        });
-
-        // Close menu when a link is clicked
-        navLinks.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
-                const icon = mobileMenuBtn.querySelector('i');
-                if (icon) icon.classList.replace('ph-x', 'ph-list');
-            });
+    // 6. Mobile Menu Toggle
+    const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+    if (mobileMenuBtn) {
+        mobileMenuBtn.addEventListener("click", () => {
+            document.body.classList.toggle("mobile-nav-open");
+            const icon = mobileMenuBtn.querySelector("i");
+            const isOpen = document.body.classList.contains("mobile-nav-open");
+            if (isOpen) { icon.classList.replace("ph-list", "ph-x"); }
+            else { icon.classList.replace("ph-x", "ph-list"); }
         });
     }
 
-    // 8. Dynamic Favicon Generator
-    const favicon = document.createElement('link');
-    favicon.rel = 'icon';
+    // 7. Dynamic Favicon
+    const favicon = document.createElement("link");
+    favicon.rel = "icon";
     document.head.appendChild(favicon);
-    
-    const canvas = document.createElement('canvas');
-    canvas.width = 64;
-    canvas.height = 64;
-    const ctx = canvas.getContext('2d');
-    
-    const letters = ['T', 'A', 'S', 'H', 'F', 'I', 'N'];
+
+    const canvas = document.createElement("canvas");
+    canvas.width = 64; canvas.height = 64;
+    const ctx = canvas.getContext("2d");
+    const letters = ["T", "A", "S", "H", "F", "I", "N"];
     let letterIndex = 0;
 
     function updateFavicon() {
         ctx.clearRect(0, 0, 64, 64);
-        
-        // Draw circular background
         ctx.beginPath();
         ctx.arc(32, 32, 32, 0, 2 * Math.PI);
-        ctx.fillStyle = '#3b82f6'; // Match var(--primary)
+        ctx.fillStyle = "#111111";
         ctx.fill();
-        
-        // Draw letter
-        ctx.fillStyle = 'white';
-        ctx.font = 'bold 36px sans-serif';
-        ctx.textAlign = 'center';
-        ctx.textBaseline = 'middle';
-        ctx.fillText(letters[letterIndex], 32, 36);
-        
-        favicon.href = canvas.toDataURL('image/png');
+        ctx.fillStyle = "#faf7f3";
+        ctx.font = "bold 38px Archivo, sans-serif";
+        ctx.textAlign = "center";
+        ctx.textBaseline = "middle";
+        ctx.fillText(letters[letterIndex], 32, 35);
+        favicon.href = canvas.toDataURL("image/png");
         letterIndex = (letterIndex + 1) % letters.length;
     }
-    
-    // Update roughly every 571ms (4 seconds / 7 letters)
-    setInterval(updateFavicon, 571);
+
+    setInterval(updateFavicon, 600);
     updateFavicon();
 });

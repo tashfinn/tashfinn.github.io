@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Miftahul Islam Tashfin | Software Engineer</title>
     <meta name="description" content="Portfolio of Miftahul Islam Tashfin, Software Engineering Undergraduate specializing in Full-Stack Development.">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
-    <!-- Phosphor Icons (Sleek modern icons) -->
+    <!-- Google Fonts: Archivo (Majd theme) -->
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,700&display=swap" rel="stylesheet">
+    <!-- Phosphor Icons -->
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -23,7 +23,7 @@
                     <li><a href="#skills">Skills</a></li>
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#contact">Contact</a></li>
-                    <li><a href="assets/Miftahul_Islam_Tashfin_Resume.pdf" target="_blank" class="btn-primary" style="padding: 0.5rem 1rem; font-size: 0.9rem;"><i class="ph-fill ph-file-pdf"></i> View CV</a></li>
+                    <li><a href="resume.html" target="_blank" class="btn-cv"><i class="ph ph-file-text"></i> View CV</a></li>
                 </ul>
                 <button id="theme-toggle" class="theme-btn" aria-label="Toggle theme">
                     <i class="ph ph-sun"></i>
@@ -40,10 +40,10 @@
         <div class="container hero-container fade-in">
             <div class="hero-text">
                 <div class="status-badge">
-                    <i class="ph-fill ph-lightning" style="color: #fbbf24;"></i> Available for Opportunities
+                    Available for Opportunities
                 </div>
                 <h1 class="hero-hello">Hi, I'm</h1>
-                <h1 class="name gradient-text">Tashfin</h1>
+                <h1 class="name">Tashfin</h1>
                 <h2 class="dynamic-text"><span class="typed-text"></span><span class="cursor">&nbsp;</span></h2>
                 <p class="hero-desc">
                     Miftahul Islam Tashfin, A 4th-year Software Engineering Undergraduate at East West University & Creative Secretary at the East West University Computer Programming Club.
@@ -73,10 +73,10 @@
     <!-- About Section -->
     <section id="about" class="about section">
         <div class="container fade-in-up">
-            <h2 class="section-title text-center"><span class="gradient-text">About</span> Me</h2>
+            <h2 class="section-title text-center"><span class="accent">About</span> Me</h2>
             <div class="about-grid">
                 <div class="about-text">
-                    <h3 style="font-size: 2.2rem; font-family: var(--font-heading); margin-bottom: 1.5rem; color: white; line-height: 1.2;">A passionate Tech Enthusiast.</h3>
+                    <h3>A passionate Tech Enthusiast.</h3>
                     <p>I am a 4th-year <strong>Software Engineering Undergraduate</strong> at East West University, Dhaka. I am incredibly passionate about full-stack development, mobile app development and always eager to learn modern technologies and build impactful solutions.</p>
                 </div>
                 <div class="about-stats glass-card">
@@ -91,18 +91,18 @@
                 </div>
             </div>
             
-            <div class="about-cards" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-top: 3rem;">
-                <div class="glass-card" style="padding: 2.5rem 1rem; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 1rem; transition: transform 0.3s ease;">
-                    <i class="ph-bold ph-code" style="font-size: 3.5rem; color: #ec4899;"></i>
-                    <h4 style="font-size: 1.3rem; font-family: var(--font-heading);">Software Dev</h4>
+            <div class="about-cards">
+                <div class="glass-card">
+                    <i class="ph-bold ph-code" style="color: #111;"></i>
+                    <h4>Software Dev</h4>
                 </div>
-                <div class="glass-card" style="padding: 2.5rem 1rem; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 1rem; transition: transform 0.3s ease;">
-                    <i class="ph-fill ph-stack" style="font-size: 3.5rem; color: #8b5cf6;"></i>
-                    <h4 style="font-size: 1.3rem; font-family: var(--font-heading);">Full Stack Dev</h4>
+                <div class="glass-card">
+                    <i class="ph-fill ph-stack" style="color: #111;"></i>
+                    <h4>Full Stack Dev</h4>
                 </div>
-                <div class="glass-card" style="padding: 2.5rem 1rem; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 1rem; transition: transform 0.3s ease;">
-                    <i class="ph-fill ph-device-mobile" style="font-size: 3.5rem; color: #3b82f6;"></i>
-                    <h4 style="font-size: 1.3rem; font-family: var(--font-heading);">Mobile App Dev</h4>
+                <div class="glass-card">
+                    <i class="ph-fill ph-device-mobile" style="color: #111;"></i>
+                    <h4>Mobile App Dev</h4>
                 </div>
             </div>
         </div>
@@ -111,13 +111,13 @@
     <!-- Experience Section -->
     <section id="experience" class="experience section">
         <div class="container fade-in-up">
-            <h2 class="section-title text-center" style="margin-bottom: 4rem;"><span class="gradient-text">Experience</span> Roadmap</h2>
+            <h2 class="section-title text-center"><span class="accent">Experience</span> Roadmap</h2>
             <div class="timeline">
                 <div class="timeline-item left">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content glass-card">
                         <h3>Creative Secretary</h3>
-                        <h4 style="color: #ec4899;">East West University Computer Programming Club</h4>
+                        <h4>East West University Computer Programming Club</h4>
                         <div class="timeline-badge">Oct 2025 - Present</div>
                         <p>Leading creative direction, technical initiatives, and overseeing visual design for major university programming events.</p>
                     </div>
@@ -127,7 +127,7 @@
                     <div class="timeline-dot"></div>
                     <div class="timeline-content glass-card">
                         <h3>Sub-Executive</h3>
-                        <h4 style="color: #3b82f6;">East West University Computer Programming Club</h4>
+                        <h4>East West University Computer Programming Club</h4>
                         <div class="timeline-badge">May 2024 - Oct 2025</div>
                         <p>Assisted in planning and executing major club events, coordinating technical workshops, and mentoring junior members.</p>
                     </div>
@@ -137,7 +137,7 @@
                     <div class="timeline-dot"></div>
                     <div class="timeline-content glass-card">
                         <h3>E-Learning Coordinator</h3>
-                        <h4 style="color: #c084fc;">Utsho Academic & Exam Care</h4>
+                        <h4>Utsho Academic & Exam Care</h4>
                         <div class="timeline-badge">Oct 2025 - Present</div>
                         <p>Leading the development and maintenance of the institute's official website and mobile application, while overseeing online technical operations and e-learning infrastructure.</p>
                     </div>
@@ -149,12 +149,12 @@
     <!-- Skills Section -->
     <section id="skills" class="skills section">
         <div class="container fade-in-up">
-            <h2 class="section-title text-center">My <span class="gradient-text">Skills</span></h2>
+            <h2 class="section-title text-center">My <span class="accent">Skills</span></h2>
             <div class="skills-grid" style="gap: 3rem;">
                 
                 <!-- Programming Languages Box -->
                 <div class="skill-category glass-card">
-                    <h3 style="margin-bottom: 2rem; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 1rem;"><i class="ph ph-code"></i> Programming Languages</h3>
+                    <h3><i class="ph ph-code"></i> Programming Languages</h3>
                     <div class="skill-icons-container">
                         <div class="skill-icon-card">
                             <i class="ph-fill ph-c-circle" style="color: #94a3b8;"></i>
@@ -185,7 +185,7 @@
 
                 <!-- Web & Frameworks Box -->
                 <div class="skill-category glass-card">
-                    <h3 style="margin-bottom: 2rem; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 1rem;"><i class="ph ph-globe"></i> Web & Frameworks</h3>
+                    <h3><i class="ph ph-globe"></i> Web & Frameworks</h3>
                     <div class="skill-icons-container">
                         <div class="skill-icon-card">
                             <i class="ph-fill ph-atom" style="color: #61dafb;"></i>
@@ -216,7 +216,7 @@
 
                 <!-- Tools Box -->
                 <div class="skill-category glass-card" style="grid-column: 1 / -1; max-width: 800px; margin: 0 auto; width: 100%;">
-                    <h3 style="margin-bottom: 2rem; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 1rem;"><i class="ph ph-paint-brush"></i> Tools & Others</h3>
+                    <h3><i class="ph ph-paint-brush"></i> Tools & Others</h3>
                     <div class="skill-icons-container" id="tools-grid">
                         <div class="skill-icon-card">
                             <i class="ph-fill ph-figma-logo" style="color: #f24e1e;"></i>
@@ -244,7 +244,7 @@
     <!-- Projects Section -->
     <section id="projects" class="projects section">
         <div class="container">
-            <h2 class="section-title text-center fade-in-up">Featured <span class="gradient-text">Projects</span></h2>
+            <h2 class="section-title text-center fade-in-up">Featured <span class="accent">Projects</span></h2>
             <div class="projects-grid">
                 <a href="https://github.com/tashfinn/ewu-connected" target="_blank" class="project-card glass-card fade-in-up">
                     <div class="project-content">
@@ -297,7 +297,7 @@
     <!-- Footer / Contact -->
     <footer id="contact" class="footer section">
         <div class="container fade-in-up">
-            <h2 class="section-title text-center">Let's <span class="gradient-text">Connect</span></h2>
+            <h2 class="section-title text-center">Let's <span class="accent">Connect</span></h2>
             
             <div class="contact-grid">
                 <div class="contact-left">
