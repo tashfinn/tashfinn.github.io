@@ -23,6 +23,32 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
+    // 2b. Interactive 3D Parallax Tilt on Portrait Photo Card
+    const portraitCard = document.getElementById("hero-portrait-card");
+    const photoWrapper = portraitCard ? portraitCard.querySelector(".portrait-photo-wrapper") : null;
+    if (portraitCard && photoWrapper) {
+        portraitCard.addEventListener("mousemove", (e) => {
+            const rect = portraitCard.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+            const rotateX = ((y - centerY) / centerY) * -9;
+            const rotateY = ((x - centerX) / centerX) * 9;
+
+            photoWrapper.style.animation = "none";
+            photoWrapper.style.transform = `perspective(800px) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg) scale3d(1.025, 1.025, 1.025)`;
+        });
+
+        portraitCard.addEventListener("mouseleave", () => {
+            photoWrapper.style.transform = "perspective(800px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)";
+            setTimeout(() => {
+                photoWrapper.style.animation = "portraitFloat 6.5s ease-in-out infinite";
+                photoWrapper.style.transform = "";
+            }, 350);
+        });
+    }
+
     // 3. Live Dhaka Local Time Badge
     function updateDhakaClock() {
         const dhakaTimeBadge = document.getElementById("dhaka-time-badge");

@@ -1,4 +1,4 @@
-﻿/* ============================================================
+/* ============================================================
    TASHFIN PORTFOLIO — Bento-Grid Dark Luxe Theme (Dribbble 2025)
    Design System:
      - Surface Base:      #09090b (Deep Obsidian Canvas)
@@ -502,7 +502,7 @@ ul { list-style: none; }
     transform: translateY(-2px);
 }
 
-/* Card 2: Portrait Bento Card */
+/* Card 2: Portrait Bento Card (Animated) */
 .hero-portrait-card {
     padding: 1.25rem;
     display: flex;
@@ -510,6 +510,28 @@ ul { list-style: none; }
     justify-content: space-between;
     position: relative;
     overflow: hidden;
+    perspective: 1000px;
+}
+
+/* Ambient Pulsing Glow Aura behind Photo */
+.portrait-glow-aura {
+    position: absolute;
+    top: 15%;
+    left: 10%;
+    right: 10%;
+    bottom: 15%;
+    background: radial-gradient(circle, rgba(16, 185, 129, 0.35) 0%, rgba(6, 182, 212, 0.22) 50%, transparent 75%);
+    filter: blur(45px);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 0;
+    animation: auraBreathe 7s ease-in-out infinite alternate;
+}
+
+@keyframes auraBreathe {
+    0%   { transform: scale(0.9) translate(-6px, -6px); opacity: 0.4; }
+    50%  { transform: scale(1.12) translate(6px, 6px); opacity: 0.75; }
+    100% { transform: scale(0.95) translate(0, 0); opacity: 0.45; }
 }
 
 .portrait-photo-wrapper {
@@ -519,6 +541,45 @@ ul { list-style: none; }
     border-radius: var(--radius-md);
     overflow: hidden;
     position: relative;
+    z-index: 1;
+    transform-style: preserve-3d;
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.5);
+    animation: portraitFloat 6.5s ease-in-out infinite;
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease;
+    will-change: transform;
+}
+
+@keyframes portraitFloat {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50%      { transform: translateY(-7px) rotate(0.4deg); }
+}
+
+/* Holographic Shimmer Sweep across the portrait */
+.portrait-shimmer-sweep {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        115deg,
+        transparent 20%,
+        rgba(255, 255, 255, 0.08) 40%,
+        rgba(16, 185, 129, 0.22) 50%,
+        rgba(255, 255, 255, 0.08) 60%,
+        transparent 80%
+    );
+    transform: translateX(-150%) skewX(-20deg);
+    pointer-events: none;
+    z-index: 2;
+    animation: shimmerPass 5.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+@keyframes shimmerPass {
+    0%, 35% { transform: translateX(-150%) skewX(-20deg); opacity: 0; }
+    40%     { opacity: 1; }
+    70%     { transform: translateX(200%) skewX(-20deg); opacity: 1; }
+    71%, 100% { opacity: 0; }
 }
 
 .portrait-photo-wrapper img {
@@ -527,11 +588,13 @@ ul { list-style: none; }
     object-fit: cover;
     object-position: center 20%;
     filter: contrast(106%) brightness(96%);
-    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), filter 0.6s ease;
+    will-change: transform;
 }
 
 .hero-portrait-card:hover .portrait-photo-wrapper img {
-    transform: scale(1.04);
+    transform: scale(1.06);
+    filter: contrast(110%) brightness(102%);
 }
 
 .portrait-photo-wrapper::after {
@@ -543,6 +606,7 @@ ul { list-style: none; }
     height: 55%;
     background: linear-gradient(180deg, transparent 0%, rgba(18, 18, 21, 0.95) 100%);
     pointer-events: none;
+    z-index: 1;
 }
 
 .portrait-badge-top {
