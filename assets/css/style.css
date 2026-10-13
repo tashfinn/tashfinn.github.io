@@ -397,9 +397,9 @@ ul { list-style: none; }
 
 .hero-main-title {
     font-family: var(--font-heading);
-    font-size: clamp(2.85rem, 5.8vw, 4.65rem);
+    font-size: clamp(2.5rem, 5.2vw, 4.2rem);
     font-weight: 900;
-    line-height: 1.04;
+    line-height: 1.08;
     letter-spacing: -0.035em;
     color: var(--text-primary);
     margin-bottom: 1.5rem;
