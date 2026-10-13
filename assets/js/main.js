@@ -23,15 +23,59 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // 2b. Interactive 3D Parallax Tilt & Scroll Animation on Portrait Photo
+    // 2b. Interactive Landing, 3D Hover Tilt & Scroll Parallax on Portrait Photo
     const portraitCard = document.getElementById("hero-portrait-card");
     const photoWrapper = portraitCard ? portraitCard.querySelector(".portrait-photo-wrapper") : null;
+    const portraitImg = portraitCard ? portraitCard.querySelector(".portrait-img") : null;
+
     if (portraitCard && photoWrapper) {
         let isHovered = false;
 
+        // 1. Landing Entrance Animation (triggered on page load)
+        setTimeout(() => {
+            portraitCard.classList.add("landed");
+        }, 120);
+
+        // 2. Continuous Scroll-Driven Parallax Motion
+        function updateScrollParallax() {
+            if (isHovered) return;
+            const rect = portraitCard.getBoundingClientRect();
+            const windowHeight = window.innerHeight;
+
+            if (rect.top < windowHeight && rect.bottom > 0) {
+                const centerOffset = (rect.top + rect.height / 2) - (windowHeight / 2);
+                const progress = centerOffset / (windowHeight / 2); // -1.0 to +1.0
+
+                // 3D perspective pitch on wrapper as you scroll
+                const tiltX = progress * 7;
+                const translateY = progress * -16;
+                photoWrapper.style.transform = `perspective(900px) rotateX(${tiltX.toFixed(2)}deg) translateY(${translateY.toFixed(1)}px)`;
+
+                // Internal lens parallax on the image
+                if (portraitImg) {
+                    const imgShift = progress * 26;
+                    portraitImg.style.transform = `translateY(${(-8 + imgShift).toFixed(1)}%) scale(1.04)`;
+                }
+            }
+        }
+
+        let scrollTicking = false;
+        window.addEventListener("scroll", () => {
+            if (!scrollTicking) {
+                window.requestAnimationFrame(() => {
+                    updateScrollParallax();
+                    scrollTicking = false;
+                });
+                scrollTicking = true;
+            }
+        }, { passive: true });
+
+        // Initial check on page load
+        updateScrollParallax();
+
+        // 3. Interactive Mouse Hover 3D Tilt
         portraitCard.addEventListener("mouseenter", () => {
             isHovered = true;
-            photoWrapper.style.animation = "none";
         });
 
         portraitCard.addEventListener("mousemove", (e) => {
@@ -40,10 +84,13 @@ document.addEventListener("DOMContentLoaded", () => {
             const y = e.clientY - rect.top;
             const centerX = rect.width / 2;
             const centerY = rect.height / 2;
-            const rotateX = ((y - centerY) / centerY) * -9;
-            const rotateY = ((x - centerX) / centerX) * 9;
+            const rotateX = ((y - centerY) / centerY) * -11;
+            const rotateY = ((x - centerX) / centerX) * 11;
 
-            photoWrapper.style.transform = `perspective(800px) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg) scale3d(1.025, 1.025, 1.025)`;
+            photoWrapper.style.transform = `perspective(800px) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg) scale3d(1.03, 1.03, 1.03)`;
+            if (portraitImg) {
+                portraitImg.style.transform = "translateY(-8%) scale(1.08)";
+            }
         });
 
         portraitCard.addEventListener("mouseleave", () => {
@@ -51,31 +98,10 @@ document.addEventListener("DOMContentLoaded", () => {
             photoWrapper.style.transform = "perspective(800px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)";
             setTimeout(() => {
                 if (!isHovered) {
-                    photoWrapper.style.animation = "portraitFloat 6.5s ease-in-out infinite";
-                    photoWrapper.style.transform = "";
+                    updateScrollParallax();
                 }
             }, 350);
         });
-
-        // Scroll-Driven Parallax Motion
-        let scrollTicking = false;
-        window.addEventListener("scroll", () => {
-            if (!scrollTicking) {
-                window.requestAnimationFrame(() => {
-                    if (!isHovered) {
-                        const rect = portraitCard.getBoundingClientRect();
-                        const windowHeight = window.innerHeight;
-                        if (rect.top < windowHeight && rect.bottom > 0) {
-                            const scrollProgress = (windowHeight - rect.top) / (windowHeight + rect.height);
-                            const parallaxY = (scrollProgress - 0.5) * 36;
-                            photoWrapper.style.transform = `translate3d(0, ${parallaxY.toFixed(1)}px, 0)`;
-                        }
-                    }
-                    scrollTicking = false;
-                });
-                scrollTicking = true;
-            }
-        }, { passive: true });
     }
 
     // 3. Live Dhaka Local Time Badge
